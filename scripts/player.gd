@@ -1,9 +1,15 @@
 extends CharacterBody2D
 
+var state_machine
+const speed = 80
+const run_multiplier = 2.5
+const acceleration = 0.2
 
-var speed = 200  # speed in pixels/sec
-@onready var sprite = $sprite
-@onready var collision = $collision
+@export_category("Objects")
+@export var animation_tree: AnimationTree
+
+func _ready():
+	state_machine = animation_tree["parameters/playback"]
 
 func _process(delta):
 	if Input.is_action_pressed("force_exit"): 
@@ -11,28 +17,28 @@ func _process(delta):
 		#apertar Ctrl+Q ou Select (joystick) fecha a cena do player
 
 func _physics_process(delta):
+	move()
+	animate()
+	move_and_slide()
+	
+func move():
 	var direction = Input.get_vector("left", "right", "up", "down")
+	var movement = direction.normalized()*speed
+	
+	if direction != Vector2.ZERO:
+		animation_tree["parameters/idle/blend_position"] = direction.normalized()
+		animation_tree["parameters/walk/blend_position"] = direction.normalized()
+		animation_tree["parameters/run/blend_position"] = direction.normalized()
 	
 	if Input.is_action_pressed("shift"):
-		velocity = (direction*2.5*speed)
-		sprite.speed_scale = 2
-		if velocity.x >= 0:
-			sprite.rotation_degrees += 10
-		else: sprite.rotation_degrees -= 10
-	else:
-		velocity = (direction*speed)
-		sprite.speed_scale = 1
-		sprite.rotation_degrees = 0
-	
-	if velocity.x == 0 && velocity.y == 0:
-		sprite.play("idle")
-	elif velocity.x > 0:
-		sprite.play("walk_right")
-	elif velocity.x < 0:
-		sprite.play("walk_left")
-	elif velocity.y > 0:
-		sprite.play("walk_front")
-	elif velocity.y < 0:
-		sprite.play("walk_rear")
+		velocity = lerp(velocity,movement*run_multiplier, acceleration)
+	else: velocity = lerp(velocity,movement,acceleration)
 
-	move_and_slide()
+func animate():
+	if velocity.length() > 10:
+		if Input.is_action_pressed("shift"):
+			state_machine.travel("run")
+			return
+		else: state_machine.travel("walk")
+		return
+	else: state_machine.travel("idle")
