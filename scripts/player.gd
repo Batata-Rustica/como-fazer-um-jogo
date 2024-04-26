@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 var state_machine
-const speed = 80
-const run_multiplier = 2.5
+const speed = 200
+const run_multiplier = 2
 const acceleration = 0.2
 
 @export_category("Objects")
@@ -33,6 +33,7 @@ func move():
 	if Input.is_action_pressed("shift"):
 		velocity = lerp(velocity,movement*run_multiplier, acceleration)
 	else: velocity = lerp(velocity,movement,acceleration)
+	
 
 func animate():
 	if velocity.length() > 10:

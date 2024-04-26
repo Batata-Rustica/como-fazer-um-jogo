@@ -562,7 +562,7 @@ animation = &"idle_up"
 animation = &"idle_left"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3eyp1"]
-animation = &"idle_up"
+animation = &"idle_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_k2fw3"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_ol6en")
@@ -655,8 +655,10 @@ libraries = {
 [node name="animation_tree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_t1agt")
 anim_player = NodePath("../animation")
-parameters/idle/blend_position = Vector2(-0.00168067, 0.00636935)
-parameters/run/blend_position = Vector2(0.408403, 0.198238)
+parameters/idle/blend_position = Vector2(-0.00376648, 0.015873)
+parameters/run/blend_position = Vector2(0.00376654, 0.026455)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="camera" type="Camera2D" parent="."]
+scale = Vector2(2.05821, 2.05821)
+zoom = Vector2(0.5, 0.5)
