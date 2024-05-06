@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dqyl121gdht3w" path="res://recursos/character/CharacterSpriteSheet.png" id="2_htyd5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcggq"]
-radius = 2.0
-height = 8.0
+radius = 3.75
+height = 7.5
 
 [sub_resource type="Animation" id="Animation_rtg3f"]
 length = 0.001
@@ -644,6 +644,7 @@ frame = 1
 
 [node name="collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
+position = Vector2(0, -1.75)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_dcggq")
 
