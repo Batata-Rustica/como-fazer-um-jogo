@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dqyl121gdht3w" path="res://recursos/character/CharacterSpriteSheet.png" id="2_htyd5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcggq"]
-radius = 2.0
-height = 8.0
+radius = 3.75
+height = 7.5
 
 [sub_resource type="Animation" id="Animation_rtg3f"]
 length = 0.001
@@ -562,7 +562,7 @@ animation = &"idle_up"
 animation = &"idle_left"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3eyp1"]
-animation = &"idle_up"
+animation = &"idle_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_k2fw3"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_ol6en")
@@ -644,6 +644,7 @@ frame = 1
 
 [node name="collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
+position = Vector2(0, -1.75)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_dcggq")
 
@@ -655,8 +656,10 @@ libraries = {
 [node name="animation_tree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_t1agt")
 anim_player = NodePath("../animation")
-parameters/idle/blend_position = Vector2(-0.00168067, 0.00636935)
-parameters/run/blend_position = Vector2(0.408403, 0.198238)
+parameters/idle/blend_position = Vector2(-0.00376648, 0.015873)
+parameters/run/blend_position = Vector2(0.00376654, 0.026455)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="camera" type="Camera2D" parent="."]
+scale = Vector2(2.05821, 2.05821)
+zoom = Vector2(0.5, 0.5)
