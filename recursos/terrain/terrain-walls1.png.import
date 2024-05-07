@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://debyvihr4gx67"
-path="res://.godot/imported/terrain-test-ver2.png-a1f8a83c2f3d7e52da62ba14065fa338.ctex"
+uid="uid://bcb5dswhu0wsr"
+path="res://.godot/imported/terrain-walls1.png-742319b5d9ed041f0e8090c892f5fb38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/terrain/terrain-test-ver2.png"
-dest_files=["res://.godot/imported/terrain-test-ver2.png-a1f8a83c2f3d7e52da62ba14065fa338.ctex"]
+source_file="res://recursos/terrain/terrain-walls1.png"
+dest_files=["res://.godot/imported/terrain-walls1.png-742319b5d9ed041f0e8090c892f5fb38.ctex"]
 
 [params]
 

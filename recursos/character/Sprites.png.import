@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcb5dswhu0wsr"
-path="res://.godot/imported/terrain-test.png-cb33ddc2e8641d921eeb1d8f0ea18de7.ctex"
+uid="uid://cetmemb4r7fbo"
+path="res://.godot/imported/Sprites.png-acbd7f6b8eed2dde69293941cf957d3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/terrain/terrain-test.png"
-dest_files=["res://.godot/imported/terrain-test.png-cb33ddc2e8641d921eeb1d8f0ea18de7.ctex"]
+source_file="res://recursos/character/Sprites.png"
+dest_files=["res://.godot/imported/Sprites.png-acbd7f6b8eed2dde69293941cf957d3b.ctex"]
 
 [params]
 
