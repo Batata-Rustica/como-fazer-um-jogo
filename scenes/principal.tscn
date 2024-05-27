@@ -6,6 +6,7 @@
 [node name="Principal" type="Node2D"]
 
 [node name="level" parent="." instance=ExtResource("1_vbsql")]
+script = null
 
 [node name="player" parent="." instance=ExtResource("2_l0wsb")]
 position = Vector2(161, 230)

@@ -11,21 +11,42 @@ config_version=5
 [application]
 
 config/name="como_fazer_um_jogo"
+run/main_scene="res://scenes/principal.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+BackgroundMusic="*res://scenes/background_music.tscn"
+Sounds="*res://scripts/sounds.gd"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://resources/UI/pointer_scifi_b.png"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://resources/": "orange",
+"res://scenes/": "blue",
+"res://scripts/": "green"
+}
 
 [input]
 

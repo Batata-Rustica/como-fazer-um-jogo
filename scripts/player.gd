@@ -7,6 +7,8 @@ const acceleration = 0.2
 
 @export_category("Objects")
 @export var animation_tree: AnimationTree
+@onready var footstep = $player_audios/footsteps
+
 
 func _ready():
 	state_machine = animation_tree["parameters/playback"]
@@ -43,3 +45,8 @@ func animate():
 		else: state_machine.travel("walk")
 		return
 	else: state_machine.travel("idle")
+	_play_footstep_sound()
+
+
+func _play_footstep_sound():
+	footstep.play()
