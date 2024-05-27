@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvlhyfr85a1be"]
+
+[ext_resource type="Script" path="res://scripts/sounds.gd" id="1_51jvr"]
+
+[node name="Node" type="Node" node_paths=PackedStringArray("music_player", "sound_player")]
+script = ExtResource("1_51jvr")
+music_player = NodePath("music_player")
+sound_player = NodePath("sound_player")
+
+[node name="music_player" type="AudioStreamPlayer" parent="."]
+
+[node name="sound_player" type="AudioStreamPlayer" parent="."]
