@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="como_fazer_um_jogo"
-run/main_scene="res://scenes/principal.tscn"
+run/main_scene="res://scenes/levels/level_inf1.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -99,6 +99,6 @@ force_exit={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
