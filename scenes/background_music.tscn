@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cspc7e78sqa33"]
 
-[ext_resource type="AudioStream" uid="uid://dq1q7wga14wgh" path="res://recursos/sounds/music/262836__b_lamerichs__short-loops-01-02-2015-1a.mp3" id="1_jnqko"]
+[ext_resource type="AudioStream" uid="uid://dq1q7wga14wgh" path="res://resources/sounds/music/262836__b_lamerichs__short-loops-01-02-2015-1a.mp3" id="1_jnqko"]
 
 [node name="background_music" type="AudioStreamPlayer"]
 stream = ExtResource("1_jnqko")

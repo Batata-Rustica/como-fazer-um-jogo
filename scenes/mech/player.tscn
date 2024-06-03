@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://seesw4dwuuod"]
+[gd_scene load_steps=35 format=3 uid="uid://seesw4dwuuod"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_xc7pf"]
 [ext_resource type="Texture2D" uid="uid://dhjmj1j16l0l3" path="res://resources/character/player_sprites.png" id="2_fkibk"]
+[ext_resource type="AudioStream" uid="uid://btfefae0h0m72" path="res://resources/sounds/ambiance/zapsplat_foley_footsteps_boots_gumboots_wellingtons_adults_walking_on_concrete_medium_fast_109731.mp3" id="3_fgvps"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcggq"]
 radius = 2.4855
@@ -406,3 +407,8 @@ parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(1.3, 1.3)
+
+[node name="player_audios" type="Node" parent="."]
+
+[node name="footsteps" type="AudioStreamPlayer2D" parent="player_audios"]
+stream = ExtResource("3_fgvps")
