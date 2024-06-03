@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgdpyvacujlhc"]
+
+[ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_rr36r"]
+[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/mech/player.tscn" id="2_l0wsb"]
+
+[node name="Principal" type="Node2D"]
+
+[node name="level_terrain" parent="." instance=ExtResource("1_rr36r")]
+position = Vector2(405, 1080)
+scale = Vector2(1.5, 1.5)
+
+[node name="player" parent="." instance=ExtResource("2_l0wsb")]
+z_index = 1
+position = Vector2(550, 1038)
+scale = Vector2(1.5, 1.5)
