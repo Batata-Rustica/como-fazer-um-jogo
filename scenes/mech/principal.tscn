@@ -6,10 +6,7 @@
 [node name="Principal" type="Node2D"]
 
 [node name="level_terrain" parent="." instance=ExtResource("1_rr36r")]
-position = Vector2(405, 1080)
-scale = Vector2(1.5, 1.5)
 
 [node name="player" parent="." instance=ExtResource("2_l0wsb")]
 z_index = 1
-position = Vector2(550, 1038)
-scale = Vector2(1.5, 1.5)
+position = Vector2(111, -36)
