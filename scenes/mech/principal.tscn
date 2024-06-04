@@ -8,5 +8,5 @@
 [node name="level_terrain" parent="." instance=ExtResource("1_rr36r")]
 
 [node name="player" parent="." instance=ExtResource("2_l0wsb")]
-z_index = 1
+z_index = 3
 position = Vector2(111, -36)

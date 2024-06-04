@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqyl121gdht3w"
-path="res://.godot/imported/CharacterSpriteSheet.png-836345e508418f0e5111f3de2a51d59e.ctex"
+uid="uid://17fcwr50dmo3"
+path="res://.godot/imported/roguelikeIndoor_transparent.png-a270cfc5b3e854ab2c529833e6eb6b88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/character/CharacterSpriteSheet.png"
-dest_files=["res://.godot/imported/CharacterSpriteSheet.png-836345e508418f0e5111f3de2a51d59e.ctex"]
+source_file="res://resources/objects/roguelikeIndoor_transparent.png"
+dest_files=["res://.godot/imported/roguelikeIndoor_transparent.png-a270cfc5b3e854ab2c529833e6eb6b88.ctex"]
 
 [params]
 
