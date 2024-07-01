@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://wyrmas8nygxq"]
+
+[ext_resource type="PackedScene" uid="uid://68u2gnges7ur" path="res://scenes/levels/level_lab1.tscn" id="1_1r7yg"]
+[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_85jai"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_fo54b"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="level_terrain" parent="." instance=ExtResource("1_1r7yg")]
+position = Vector2(-681, 180)
+
+[node name="player" parent="." instance=ExtResource("2_85jai")]
+position = Vector2(1031, 152)
+
+[node name="level_changer" parent="." instance=ExtResource("3_fo54b")]
+z_index = 2
+position = Vector2(1024, 124)

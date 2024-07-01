@@ -1,8 +1,8 @@
 [gd_scene load_steps=35 format=3 uid="uid://seesw4dwuuod"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_xc7pf"]
-[ext_resource type="Texture2D" uid="uid://dhjmj1j16l0l3" path="res://resources/character/player_sprites.png" id="2_fkibk"]
-[ext_resource type="AudioStream" uid="uid://btfefae0h0m72" path="res://resources/sounds/ambiance/zapsplat_foley_footsteps_boots_gumboots_wellingtons_adults_walking_on_concrete_medium_fast_109731.mp3" id="3_fgvps"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_kqcuf"]
+[ext_resource type="Texture2D" uid="uid://dhjmj1j16l0l3" path="res://resources/character/player_sprites.png" id="2_oap72"]
+[ext_resource type="AudioStream" uid="uid://btfefae0h0m72" path="res://resources/sounds/ambiance/zapsplat_foley_footsteps_boots_gumboots_wellingtons_adults_walking_on_concrete_medium_fast_109731.mp3" id="3_a43t8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcggq"]
 radius = 6.0
@@ -377,18 +377,20 @@ states/run/position = Vector2(659, 97)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_w3pux")
 states/walk/position = Vector2(497, 97)
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree")]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree") groups=["Player"]]
+z_index = 3
 position = Vector2(0, -13)
-script = ExtResource("1_xc7pf")
+script = ExtResource("1_kqcuf")
 animation_tree = NodePath("animation_tree")
 
 [node name="sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_fkibk")
+texture = ExtResource("2_oap72")
 hframes = 4
 vframes = 4
 
 [node name="collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
+z_index = 1
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_dcggq")
 
@@ -410,4 +412,4 @@ zoom = Vector2(5, 5)
 [node name="player_audios" type="Node" parent="."]
 
 [node name="footsteps" type="AudioStreamPlayer2D" parent="player_audios"]
-stream = ExtResource("3_fgvps")
+stream = ExtResource("3_a43t8")
