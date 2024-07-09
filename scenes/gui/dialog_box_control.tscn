@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cixge0sxagq0h"]
+
+[node name="dialog_box_control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1265.0
+offset_top = 1419.0
+offset_right = 1305.0
+offset_bottom = 1459.0
+scale = Vector2(100, 25)
+
+[node name="dialog" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 1

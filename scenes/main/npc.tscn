@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xx8ddpm7rqp"]
+
+[ext_resource type="Script" path="res://scripts/npc_lines.gd" id="1_roft2"]
+[ext_resource type="Texture2D" uid="uid://mdjskju0w1gk" path="res://resources/character/char_a_p1_0bas_humn_v01.png" id="2_qddcs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bab6x"]
+size = Vector2(185, 185)
+
+[node name="NPC" type="Area2D"]
+script = ExtResource("1_roft2")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_bab6x")
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(16, 16)
+texture = ExtResource("2_qddcs")
+hframes = 8
+vframes = 8
