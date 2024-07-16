@@ -31,6 +31,7 @@ directories/dch_directory={
 "player": "res://resources/dialog/characters/player.dch"
 }
 directories/dtl_directory={
+"prof_sabio": "res://resources/dialog/timelines/prof_sabio.dtl",
 "timeline": "res://resources/dialog/timelines/timeline.dtl"
 }
 layout/style_list=[""]
