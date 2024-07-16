@@ -1,20 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5xx8ddpm7rqp"]
 
-[ext_resource type="Script" path="res://scripts/npc_lines.gd" id="1_roft2"]
 [ext_resource type="Texture2D" uid="uid://mdjskju0w1gk" path="res://resources/character/char_a_p1_0bas_humn_v01.png" id="2_qddcs"]
+[ext_resource type="PackedScene" uid="uid://bdsplgnsnlv5s" path="res://scenes/main/dialog_starter.tscn" id="2_xxxou"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bab6x"]
-size = Vector2(185, 185)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43cse"]
+radius = 3.0
+height = 6.0
 
 [node name="NPC" type="Area2D"]
-script = ExtResource("1_roft2")
-
-[node name="collision" type="CollisionShape2D" parent="."]
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_bab6x")
+collision_layer = 8
+collision_mask = 8
 
 [node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(16, 16)
 texture = ExtResource("2_qddcs")
 hframes = 8
 vframes = 8
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_43cse")
+
+[node name="dialog_starter" parent="." instance=ExtResource("2_xxxou")]
+scale = Vector2(4, 4)
