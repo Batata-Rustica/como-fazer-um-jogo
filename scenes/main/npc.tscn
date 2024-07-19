@@ -1,20 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5xx8ddpm7rqp"]
+[gd_scene load_steps=5 format=3 uid="uid://c5xx8ddpm7rqp"]
 
-[ext_resource type="Texture2D" uid="uid://mdjskju0w1gk" path="res://resources/character/char_a_p1_0bas_humn_v01.png" id="2_qddcs"]
+[ext_resource type="Texture2D" uid="uid://dfjc7b1bkmkic" path="res://resources/character/npcs_sprites.png" id="1_pikia"]
+[ext_resource type="Script" path="res://scenes/main/npc.gd" id="1_uh54w"]
+[ext_resource type="PackedScene" uid="uid://bdsplgnsnlv5s" path="res://scenes/main/dialog_starter.tscn" id="3_xxypi"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_43cse"]
-radius = 3.0
-height = 6.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1aeo"]
+radius = 0.0
 
-[node name="NPC" type="Area2D"]
+[node name="npc" type="Area2D"]
 collision_layer = 8
 collision_mask = 8
+script = ExtResource("1_uh54w")
+npc_dialog = "aula_1_prof_sabio"
 
 [node name="sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_qddcs")
-hframes = 8
-vframes = 8
+texture = ExtResource("1_pikia")
+hframes = 10
+vframes = 3
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("CapsuleShape2D_43cse")
+shape = SubResource("CircleShape2D_m1aeo")
+
+[node name="dialog_starter" parent="." instance=ExtResource("3_xxypi")]
+scale = Vector2(5, 5)
+
+[connection signal="body_entered" from="dialog_starter" to="." method="_on_dialog_starter_body_entered"]
+[connection signal="body_exited" from="dialog_starter" to="." method="_on_dialog_starter_body_exited"]

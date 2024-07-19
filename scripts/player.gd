@@ -56,3 +56,6 @@ func animate():
 func _play_footstep_sound():
 	#footstep.pitch_scale = scale
 	footstep.play()
+
+func player():
+	pass

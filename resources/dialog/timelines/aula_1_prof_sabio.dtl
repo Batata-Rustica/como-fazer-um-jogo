@@ -1,0 +1,9 @@
+join prof_sabio 1 [animation="Fade In Up" wait="true"]
+prof_sabio: diálogo1
+prof_sabio: diálogo2
+prof_sabio: diálogo3
+prof_sabio: diálogo4
+prof_sabio: diálogo5
+prof_sabio: diálogo6
+prof_sabio: diálogo7
+

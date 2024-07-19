@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://nxo60lofw6o4"]
+
+[ext_resource type="PackedScene" uid="uid://bg832gxhglvtp" path="res://scenes/main/player_brainstorm.tscn" id="1_ud4u7"]
+[ext_resource type="Texture2D" uid="uid://bhwsayxmr0tqx" path="res://resources/objects/fachada_inf.jpg" id="2_pe32p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53sek"]
+size = Vector2(12.114, 3.96067)
+
+[node name="brainstorm_minigame" type="Node2D"]
+
+[node name="player_brainstorm" parent="." instance=ExtResource("1_ud4u7")]
+position = Vector2(648, 1069)
+scale = Vector2(5, 5)
+
+[node name="play_area" type="Area2D" parent="."]
+position = Vector2(548, 889)
+scale = Vector2(53.8, 14.24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="play_area"]
+z_index = 1
+position = Vector2(-2.27881, 10.2528)
+scale = Vector2(1.15093, 1)
+shape = SubResource("RectangleShape2D_53sek")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="play_area"]
+z_index = 1
+position = Vector2(12.6385, 2.23314)
+scale = Vector2(1.15093, 1)
+shape = SubResource("RectangleShape2D_53sek")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="play_area"]
+z_index = 1
+position = Vector2(11.6357, 10.1124)
+scale = Vector2(1.15093, 1)
+shape = SubResource("RectangleShape2D_53sek")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="play_area"]
+z_index = 1
+position = Vector2(20.2788, 10.5337)
+scale = Vector2(1.15093, 1)
+shape = SubResource("RectangleShape2D_53sek")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_pe32p")
