@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c5xx8ddpm7rqp"]
 
 [ext_resource type="Texture2D" uid="uid://dfjc7b1bkmkic" path="res://resources/character/npcs_sprites.png" id="1_pikia"]
-[ext_resource type="Script" path="res://scenes/main/npc.gd" id="1_uh54w"]
+[ext_resource type="Script" path="res://npc.gd" id="1_uh54w"]
 [ext_resource type="PackedScene" uid="uid://bdsplgnsnlv5s" path="res://scenes/main/dialog_starter.tscn" id="3_xxypi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1aeo"]

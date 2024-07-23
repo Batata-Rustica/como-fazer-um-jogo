@@ -20,3 +20,4 @@ position = Vector2(1024, 124)
 [node name="npc" parent="." instance=ExtResource("4_ydxov")]
 z_index = 3
 position = Vector2(1007, 255)
+npc_dialog = "nomeqvcquiser"

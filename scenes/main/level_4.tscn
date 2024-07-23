@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://p1xt05x7064s"]
+
+[ext_resource type="PackedScene" uid="uid://dnkxx8srne8fv" path="res://scenes/main/brainstorm_minigame.tscn" id="1_2js1p"]
+
+[node name="level_4" type="Node2D"]
+
+[node name="brainstorm_minigame" parent="." instance=ExtResource("1_2js1p")]

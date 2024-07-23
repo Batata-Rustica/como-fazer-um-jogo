@@ -1,17 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dphedefxj7nj"]
+[gd_scene load_steps=4 format=3 uid="uid://cmoatu13yaa5y"]
 
-[ext_resource type="PackedScene" uid="uid://68u2gnges7ur" path="res://scenes/levels/level_lab1.tscn" id="1_ivof7"]
+[ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_mmyxg"]
 [ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_e1mn0"]
 [ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_b70l3"]
 
-[node name="level_2" type="Node2D"]
+[node name="level_1" type="Node2D"]
 
-[node name="level_terrain" parent="." instance=ExtResource("1_ivof7")]
-position = Vector2(-681, 180)
+[node name="level_terrain" parent="." instance=ExtResource("1_mmyxg")]
 
 [node name="player" parent="." instance=ExtResource("2_e1mn0")]
-position = Vector2(1031, 152)
+position = Vector2(96, -37)
 
 [node name="level_changer" parent="." instance=ExtResource("3_b70l3")]
 z_index = 2
-position = Vector2(1024, 124)
+position = Vector2(798, -383)
