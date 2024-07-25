@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var score = 0
 
-const speed = 500
+const speed = 600
 
 const acceleration = 100
 const friction = 130
@@ -55,5 +55,5 @@ func _on_collecting_area_body_entered(body):
 		score += 10
 		body.queue_free()
 	elif body.has_method("spark"):
-		score -= 5
+		score -= 15
 		body.queue_free()

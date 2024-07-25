@@ -17,6 +17,6 @@ z_index = 2
 position = Vector2(778, -376)
 
 [node name="introduction" parent="." instance=ExtResource("4_5pjuc")]
-z_index = 3
+z_index = 2
 position = Vector2(95, -75)
 npc_dialog = "introduction"

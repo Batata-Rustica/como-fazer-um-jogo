@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_e1mn0"]
 [ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_b70l3"]
 
-[node name="level_1" type="Node2D"]
+[node name="level_3" type="Node2D"]
 
 [node name="level_terrain" parent="." instance=ExtResource("1_mmyxg")]
 
@@ -13,4 +13,4 @@ position = Vector2(96, -37)
 
 [node name="level_changer" parent="." instance=ExtResource("3_b70l3")]
 z_index = 2
-position = Vector2(798, -383)
+position = Vector2(778, -376)

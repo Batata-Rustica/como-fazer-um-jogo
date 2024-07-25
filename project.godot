@@ -21,8 +21,8 @@ buses/default_bus_layout=""
 
 [autoload]
 
-BackgroundMusic="*res://scenes/background_music.tscn"
-Sounds="*res://scripts/sounds.gd"
+Global="*res://scripts/Global.gd"
+BackgroundMusic="*res://scenes/background_music.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

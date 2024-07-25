@@ -7,7 +7,7 @@ position = Vector2(1029, 328)
 script = ExtResource("1_rade4")
 
 [node name="spawn_mark1" type="Marker2D" parent="."]
-position = Vector2(-968, -135)
+position = Vector2(-889, -135)
 
 [node name="spawn_mark2" type="Marker2D" parent="."]
 position = Vector2(-735, -187)
@@ -28,16 +28,16 @@ position = Vector2(87, -191)
 position = Vector2(305, -137)
 
 [node name="spawn_mark8" type="Marker2D" parent="."]
-position = Vector2(547, -184)
+position = Vector2(523, -184)
 
 [node name="spawn_mark9" type="Marker2D" parent="."]
-position = Vector2(733, -139)
+position = Vector2(700, -139)
 
 [node name="spawn_mark10" type="Marker2D" parent="."]
-position = Vector2(906, -197)
+position = Vector2(828, -199)
 
 [node name="timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.75
 autostart = true
 
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

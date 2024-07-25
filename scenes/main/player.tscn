@@ -418,6 +418,7 @@ parameters/run/blend_position = Vector2(0, 0.0132158)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="camera" type="Camera2D" parent="."]
+z_index = 5
 zoom = Vector2(5, 5)
 
 [node name="TextureRect" type="TextureRect" parent="camera"]

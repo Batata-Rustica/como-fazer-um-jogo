@@ -5,6 +5,7 @@ var player_can_dialog = false
 var force_dialog = false
 @onready var dialog_starter = $dialog_starter
 
+
 func _ready():
 	if npc_dialog == "introduction":
 		force_dialog = true

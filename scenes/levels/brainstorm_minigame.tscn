@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://dnkxx8srne8fv"]
 
 [ext_resource type="Script" path="res://scripts/brainstorm_minigame.gd" id="1_54v3k"]
+[ext_resource type="Texture2D" uid="uid://2g1ql7iat3yd" path="res://resources/objects/fachada_inf.png" id="2_2baxh"]
 [ext_resource type="PackedScene" uid="uid://b4kjyydmrqtcg" path="res://scenes/main/brainstorm_player.tscn" id="2_moe4x"]
-[ext_resource type="Texture2D" uid="uid://bhwsayxmr0tqx" path="res://resources/objects/fachada_inf.jpg" id="2_pe32p"]
 [ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="3_kylc6"]
 [ext_resource type="Texture2D" uid="uid://dhlwpn0qblv7n" path="res://resources/objects/cloud.png" id="3_u8dm7"]
 [ext_resource type="PackedScene" uid="uid://d4lxkfvdw6gii" path="res://scenes/objects/brainstorm_spawner.tscn" id="4_66te8"]
@@ -32,16 +32,15 @@ z_index = 3
 script = ExtResource("1_54v3k")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_pe32p")
-stretch_mode = 3
+offset_right = 2004.0
+offset_bottom = 1621.0
+texture = ExtResource("2_2baxh")
+stretch_mode = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(984, 646)
+position = Vector2(984, 662)
 rotation = 3.14159
 scale = Vector2(8.92667, -1.73017)
-zoom = Vector2(0.64, 0.64)
 limit_left = 0
 limit_top = 0
 limit_right = 2000
@@ -53,7 +52,7 @@ offset_top = -202.0
 offset_right = 164.0
 offset_bottom = -150.0
 scale = Vector2(-0.255554, 1.18261)
-text = "Score:"
+text = "Score: "
 label_settings = SubResource("LabelSettings_c4j5m")
 
 [node name="brainstorm_player" parent="." instance=ExtResource("2_moe4x")]

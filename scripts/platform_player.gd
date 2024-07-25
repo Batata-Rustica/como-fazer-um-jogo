@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const speed = 75.0
-const jump_power = -1500.0
-var gravity = 2500
+const jump_power = -2500.0
+var gravity = 5000
 
 func _process(delta):
 	if Input.is_action_pressed("force_exit"):

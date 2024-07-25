@@ -19,7 +19,7 @@ func _on_timer_timeout():
 	self.add_child(object)
 	
 func choose_scene():
-	if randi() % 2 == 0:
+	if randi() % 3 > 1:
 		return IDEA
 	else:
 		return SPARK
