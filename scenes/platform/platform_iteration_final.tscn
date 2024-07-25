@@ -6,10 +6,14 @@
 [node name="platform_minigame" type="Node2D"]
 
 [node name="platform_arena" parent="." instance=ExtResource("2_phmgg")]
+position = Vector2(94, -64)
 
 [node name="platform_player" parent="." instance=ExtResource("1_axmqi")]
-z_index = 3
-position = Vector2(55, 225)
+position = Vector2(147, 42)
 
 [node name="Camera2D" type="Camera2D" parent="platform_player"]
-zoom = Vector2(5, 5)
+zoom = Vector2(6, 6)
+limit_left = 0
+limit_top = 0
+limit_right = 800
+limit_bottom = 352

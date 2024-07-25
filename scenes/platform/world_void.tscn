@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c76bn1fgv0f8f"]
+
+[ext_resource type="Script" path="res://scripts/platform/world_void.gd" id="1_sqara"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34mwc"]
+
+[node name="world_void" type="Area2D"]
+script = ExtResource("1_sqara")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_34mwc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
