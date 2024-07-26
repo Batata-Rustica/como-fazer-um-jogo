@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cmblpcm4ui2u7"]
+[gd_scene load_steps=28 format=3 uid="uid://cmblpcm4ui2u7"]
 
 [ext_resource type="Script" path="res://scripts/platform/enemies/flying_enemy.gd" id="1_psc6l"]
 [ext_resource type="Texture2D" uid="uid://pj08qk3ox83g" path="res://resources/character/platform/BatFire_Sheet.png" id="2_nnl2p"]
@@ -176,6 +176,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mdpdv"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbu6j"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1teqr"]
+radius = 9.0
+
 [node name="flying_enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
@@ -193,4 +199,15 @@ shape = SubResource("CircleShape2D_mdpdv")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hitbox_collision" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_lbu6j")
+
+[node name="damage_zone" type="Area2D" parent="."]
+
+[node name="damage_zone_collision" type="CollisionShape2D" parent="damage_zone"]
+shape = SubResource("CircleShape2D_1teqr")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
