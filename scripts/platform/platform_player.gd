@@ -27,6 +27,7 @@ func _ready():
 	damage_zone_collider.disabled = true
 	can_get_hit = true
 	Global.player_alive = true
+	health = max_health
 
 func _process(delta):
 	if Input.is_action_pressed("force_exit"): 
@@ -89,29 +90,36 @@ func check_hitbox():
 		get_hit(damage)
 		get_hit_cd(1.0)
 
+func get_hit(dmg):
+	if dmg != 0:
+		if  health > 0:
+			health -= dmg
+			sprite.play("hit")
+			print("player health: ", health)
+			if health <= 0:
+				health = 0
+				dead = true
+				Global.player_alive = false
+				velocity.y = gravity*jump_power
+				handle_death_animation()
+
 func get_hit_cd(wait_time):
 	can_get_hit = false
 	await get_tree().create_timer(wait_time).timeout
 	can_get_hit = true
 
-func get_hit(dmg):
-	if dmg != 0:
-		if  health > 0:
-			health -= dmg
-			if health <= 0:
-				health = 0
-				dead = true
-				Global.player_alive = false
-				handle_death_animation()
-
 func handle_death_animation():
-	sprite.play("idle")
-	var n = 0
-	var i =4
-	while (n < i):
+	sprite.play("death")
+	$collision.position.y = 5
+	var i = 1
+	self.set_collision_layer_value(1, false)
+	Engine.time_scale = .5
+	while i < 4:
 		toggle_player_visible()
-		await get_tree().create_timer(0.2).timeout
-		n+=1
+		await get_tree().create_timer(.5).timeout
+		toggle_player_visible()
+		i+=1
+	self.queue_free()
 
 func toggle_player_visible():
 	if sprite.visible:

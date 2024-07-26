@@ -23,6 +23,11 @@ func _process(delta):
 	move(delta)
 	handle_animation()
 	
+	if Global.player_alive:
+		is_chasing = true
+	elif !Global.player_alive:
+		is_chasing = false
+	
 	if is_on_floor() and dead:
 		await get_tree().create_timer(2.0).timeout
 		self.queue_free()
@@ -31,7 +36,7 @@ func _process(delta):
 func move(delta):
 	if !dead:
 		is_roaming = true
-		if !hit and is_chasing:
+		if !hit and is_chasing and Global.player_alive:
 			player = Global.player
 			velocity = position.direction_to(player.position)*speed
 			direction.x = abs(velocity.x) / velocity.x
@@ -49,7 +54,6 @@ func _on_timer_timeout():
 	$Timer.wait_time = choose([1.0, 1.5, 2.0])
 	if !is_chasing:
 		direction = choose([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
-		print(direction)
 
 func handle_animation():
 	if !dead and !hit:
@@ -67,6 +71,7 @@ func handle_animation():
 		sprite.play("death")
 		set_collision_layer_value(1, true)
 		set_collision_layer_value(2, false)
+		set_collision_mask_value(1, false)
 
 func choose(array):
 	array.shuffle()

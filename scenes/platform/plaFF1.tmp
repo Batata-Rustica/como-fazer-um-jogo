@@ -17122,24 +17122,6 @@ position = Vector2(264, 224)
 [node name="flying_enemy3" parent="." instance=ExtResource("13_n2iaa")]
 position = Vector2(239, 258)
 
-[node name="flying_enemy4" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(437, 191)
-
-[node name="flying_enemy5" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(438, 239)
-
-[node name="flying_enemy6" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(488, 202)
-
-[node name="flying_enemy7" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(555, 245)
-
-[node name="flying_enemy8" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(593, 162)
-
-[node name="flying_enemy9" parent="." instance=ExtResource("13_n2iaa")]
-position = Vector2(603, 225)
-
 [node name="flying_enemy_box" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
@@ -17147,29 +17129,3 @@ physics_material_override = SubResource("PhysicsMaterial_rj4f3")
 
 [node name="flying_enemy_collision" type="CollisionPolygon2D" parent="flying_enemy_box"]
 polygon = PackedVector2Array(-53, 325, 11, 326, 9, 304, 43, 303, 41, 289, 88, 286, 89, 302, 184, 303, 191, 336, 202, 303, 235, 303, 236, 333, 377, 334, 377, 268, 554, 270, 559, 321, 631, 320, 630, 94, -50, 88, -53, 325, -106, 321, -73, 42, 717, 48, 697, 345, -111, 342)
-
-[node name="game_over_screen" type="ColorRect" parent="."]
-visible = false
-top_level = true
-anchors_preset = -1
-anchor_left = -0.066
-anchor_top = -0.063
-anchor_right = 0.359
-anchor_bottom = 0.385
-offset_left = -16.28
-offset_top = -33.96
-offset_right = -639.28
-offset_bottom = 790.2
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(11.4, 1)
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0.231373, 0.227451, 0.670588, 1)
-
-[node name="Label" type="Label" parent="game_over_screen"]
-layout_mode = 0
-offset_left = 62.6316
-offset_top = 440.0
-offset_right = 102.632
-offset_bottom = 463.0

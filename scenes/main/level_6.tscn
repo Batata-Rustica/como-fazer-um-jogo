@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://crgteqf04snpi"]
+
+[ext_resource type="PackedScene" uid="uid://c0ubu8qpmgabf" path="res://scenes/platform/platform_base.tscn" id="1_cdkml"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="2_p53lo"]
+
+[node name="platform_base" instance=ExtResource("1_cdkml")]
+
+[node name="level_changer" parent="." index="5" instance=ExtResource("2_p53lo")]
+position = Vector2(489, 340)
+scale = Vector2(8.60239, -1.6131)
