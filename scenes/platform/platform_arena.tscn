@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://c0nj2fyucb7f0"]
+[gd_scene load_steps=31 format=3 uid="uid://c0nj2fyucb7f0"]
 
+[ext_resource type="Script" path="res://scripts/platform/platform_arena.gd" id="1_5vuqg"]
 [ext_resource type="Texture2D" uid="uid://wxiroq2ffhsh" path="res://resources/terrain/platform/background_2a.png" id="1_bwqah"]
 [ext_resource type="Texture2D" uid="uid://bt4xv34mq1ksc" path="res://resources/terrain/platform/background_3a.png" id="2_n1fdk"]
 [ext_resource type="Texture2D" uid="uid://cqvo518xnvcs" path="res://resources/terrain/platform/background_4a.png" id="3_g123f"]
@@ -10,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dua6rxfn34ykb" path="res://resources/terrain/platform/background_2a_tinted.png" id="8_8psql"]
 [ext_resource type="Texture2D" uid="uid://dvi4sif4k1uec" path="res://resources/terrain/platform/background_3a_tinted.png" id="9_vtfxy"]
 [ext_resource type="PackedScene" uid="uid://c76bn1fgv0f8f" path="res://scenes/platform/world_void.tscn" id="10_hxku1"]
+[ext_resource type="PackedScene" uid="uid://bbfyahxn04ls4" path="res://scenes/platform/platform_player.tscn" id="11_chks4"]
+[ext_resource type="PackedScene" uid="uid://cmblpcm4ui2u7" path="res://scenes/platform/enemies/flying_enemy.tscn" id="13_n2iaa"]
 
 [sub_resource type="Gradient" id="Gradient_exc55"]
 interpolation_mode = 2
@@ -17066,9 +17069,13 @@ texture = ExtResource("7_kn24l")
 [sub_resource type="TileSet" id="TileSet_48hnw"]
 sources/9 = SubResource("TileSetAtlasSource_y7kks")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rj4f3"]
+
 [node name="platform_arena" type="Node2D"]
+script = ExtResource("1_5vuqg")
 
 [node name="background_sprite" type="StaticBody2D" parent="."]
+position = Vector2(-6, -63)
 
 [node name="ground" type="TileMap" parent="background_sprite"]
 tile_set = SubResource("TileSet_2oj7i")
@@ -17092,5 +17099,33 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1441793, 196617, 2, 1441794, 393225, 4, 1376259, 196617, 2, 1376260, 393225, 268435460, 1376261, 196617, 2, 1441798, 196617, 2, 1441799, 393225, 4, 1441800, 327689, 4, 1441801, 327689, 268435460, 1441802, 393225, 268435460, 1441803, 196617, 2, 1441805, 196617, 2, 1441806, 327689, 4, 1376272, 393225, 4, 1376273, 196617, 2, 1376274, 196617, 2, 1376276, 196617, 2, 1376277, 393225, 4, 1376278, 196617, 2, 1310744, 196617, 2, 1310745, 393225, 268435460, 1310746, 196617, 2, 1310747, 196617, 2, 1310748, 327689, 4, 1310749, 196617, 2, 1310750, 196617, 2, 1310751, 196617, 2, 1310752, 393225, 4, 1310753, 196617, 2, 1310754, 196617, 2, 1441814, 327689, 2, 1507342, 393225, 2, 1441797, 327689, 2, 1441795, 327689, 268435458, 1507341, 327689, 268435458, 1441809, 393225, 268435458, 1441812, 393225, 268435458, 1376283, 393225, 268435458, 1376287, 327689, 2, 1376289, 327689, 268435458, 1507335, 327689, 2, 1245214, 393225, 4)
 
 [node name="world_void" parent="." instance=ExtResource("10_hxku1")]
-position = Vector2(299, 424)
+position = Vector2(287, 362)
 scale = Vector2(35.7485, 0.737328)
+
+[node name="platform_player" parent="." instance=ExtResource("11_chks4")]
+position = Vector2(31, 104)
+
+[node name="Camera2D" type="Camera2D" parent="platform_player"]
+scale = Vector2(35.7485, 0.737328)
+zoom = Vector2(6, 6)
+limit_left = -80
+limit_top = 0
+limit_right = 655
+limit_bottom = 347
+
+[node name="flying_enemy" parent="." instance=ExtResource("13_n2iaa")]
+position = Vector2(277, 256)
+
+[node name="flying_enemy2" parent="." instance=ExtResource("13_n2iaa")]
+position = Vector2(264, 224)
+
+[node name="flying_enemy3" parent="." instance=ExtResource("13_n2iaa")]
+position = Vector2(239, 258)
+
+[node name="flying_enemy_box" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_rj4f3")
+
+[node name="flying_enemy_collision" type="CollisionPolygon2D" parent="flying_enemy_box"]
+polygon = PackedVector2Array(-53, 325, 11, 326, 9, 304, 43, 303, 41, 289, 88, 286, 89, 302, 184, 303, 191, 336, 202, 303, 235, 303, 236, 333, 377, 334, 377, 268, 554, 270, 559, 321, 631, 320, 630, 94, -50, 88, -53, 325, -106, 321, -73, 42, 717, 48, 697, 345, -111, 342)
