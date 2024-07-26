@@ -1,8 +1,6 @@
 join prof_sabio 1 [animation="Fade In Up" wait="true"]
-prof_sabio: diálogo1
-prof_sabio: diálogo2
-prof_sabio: diálogo3
-prof_sabio: diálogo4
-prof_sabio: diálogo5
-prof_sabio: diálogo6
-prof_sabio: diálogo7
+prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
+prof_sabio: Assim que terminar iriei inicar a aula.
+prof_sabio: Por enquanto, explore a sala...
+prof_sabio: passe nas mesas dos seus colegas de classe...
+prof_sabio: conheça o pessoal!

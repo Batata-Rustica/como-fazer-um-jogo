@@ -28,13 +28,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Aluno 1": "res://resources/dialog/timelines/Aluno 1.dch",
 "brad": "res://resources/dialog/chars/brad.dch",
 "prof_sabio": "res://resources/dialog/chars/prof_sabio.dch"
 }
 directories/dtl_directory={
 "aula_1_prof_sabio": "res://resources/dialog/timelines/aula_1_prof_sabio.dtl",
 "introduction": "res://resources/dialog/timelines/introduction.dtl",
-"nomeqvcquiser": "res://resources/dialog/timelines/nomeqvcquiser.dtl"
+"nomeqvcquiser": "res://resources/dialog/timelines/nomeqvcquiser.dtl",
+"professor_apresenta_disciplina": "res://resources/dialog/timelines/professor_apresenta_disciplina.dtl"
 }
 layout/style_list=["res://resources/dialog/chars/bubble.tres"]
 layout/default_style="res://resources/dialog/chars/bubble.tres"
