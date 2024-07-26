@@ -1,5 +1,5 @@
 join prof_sabio 1 [animation="Fade In Up" wait="true"]
-join brad 1
+join voce (voce) 1 [animation="Fade In Up"]
 prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
 prof_sabio: Assim que terminar iriei inicar a aula.
 prof_sabio: Por enquanto, explore a sala...
@@ -23,25 +23,25 @@ prof_sabio: Outra regra essencial é que não pode ficar sozinho. Formem grupos 
 alunochines: Professor, pode ser grupos de quatro pessoas?
 [wait time="2.0"]
 prof_sabio: Não! No máximo 3 pessoas!
-brad: Olá tudo bem? Eu sou novo na turma, vocês posso me juntar a vocês?
+voce: Olá tudo bem? Eu sou novo na turma, vocês posso me juntar a vocês?
 aluno_argentino: Oi, tudo bem sim, e com você? Infelizmente nosso grupo está completo
 aluno_ingles: Tente falar com o grupo ao lado
 alunochines: Oi, tudo bem? Vi que você está sem grupo. Você pode fazer parte do nosso grupo se quiser...
 alunochines: Estamos em 2 pessoas no momento
-brad: Eu aceito sim! Obrigado pelo convite...
+voce: Eu aceito sim! Obrigado pelo convite...
 alunochines: Meu nome é Wang Li e essa é a Jose.
 aluno_panamenho: Oi tudo bem? Prazer! Bem vindo ao nosso grupo ...
 prof_sabio: Agora que os grupos estão formados
 [wait time="3.0"]
 prof_sabio: Agora que os grupos estão formados vocês devem decidir o nome do grupo e elegerem um líder
 aluno_panamenho: Eu creio que a Wang Li é uma boa opção para ser a líder do nosso grupo, ela quem nos chamou para participar...
-brad: Concordo plenamente, já começou com ato de liderança
-brad: Eu tenho uma boa idéia para o nome do grupo, que tal algo engraçado algo cômico e que todos nós gostamos?\
+voce: Concordo plenamente, já começou com ato de liderança
+voce: Eu tenho uma boa idéia para o nome do grupo, que tal algo engraçado algo cômico e que todos nós gostamos?\
 
 aluno_panamenho: Não gosto muito da ideia, pensei em algo mais normal, que retrada algo mais antifo, mais rústico ...
 aluno_panamenho: Nossa que cheiro de comida... 
 alunochines: Estou comendo uma batata.
-brad: Batata Rústica?
+voce: Batata Rústica?
 prof_sabio: Gostei do nome pessoal! Parabéns!
 [wait time="2.5"]
 prof_sabio: É hora das ideias. Vocês foram contratados e precisam criar ideias para um jogo

@@ -37,7 +37,8 @@ directories/dch_directory={
 "aluno_quadrado": "res://resources/dialog/timelines/aluno_quadrado.dch",
 "alunochines": "res://resources/dialog/timelines/alunochines.dch",
 "brad": "res://resources/dialog/chars/brad.dch",
-"prof_sabio": "res://resources/dialog/chars/prof_sabio.dch"
+"prof_sabio": "res://resources/dialog/chars/prof_sabio.dch",
+"voce": "res://resources/dialog/timelines/voce.dch"
 }
 directories/dtl_directory={
 "aula_1_prof_sabio": "res://resources/dialog/timelines/aula_1_prof_sabio.dtl",
