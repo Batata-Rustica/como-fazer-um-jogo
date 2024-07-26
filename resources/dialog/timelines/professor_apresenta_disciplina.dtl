@@ -1,3 +1,7 @@
 join prof_sabio 1 [animation="Fade In Up" wait="true" z_index="1"]
 prof_sabio: Então alunos, agora que estão todos aqui, irei iniciar a aula!
-Formem grupos de até 3 alunos!
+prof_sabio: Formem grupos de até 3 alunos!
+join alunochines 2
+join aluno_panamenho 1
+join aluno_ingles 1
+join brad 1

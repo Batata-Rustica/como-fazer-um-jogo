@@ -28,7 +28,14 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Aluno 1": "res://resources/dialog/timelines/Aluno 1.dch",
+"aluno_argentino": "res://resources/dialog/timelines/aluno_argentino.dch",
+"aluno_de_algum_pais_da_africa": "res://resources/dialog/timelines/aluno_de_algum_pais_da_africa.dch",
+"aluno_flamenguista": "res://resources/dialog/timelines/aluno_flamenguista.dch",
+"aluno_ingles": "res://resources/dialog/timelines/aluno_ingles.dch",
+"aluno_japones": "res://resources/dialog/timelines/aluno_japones.dch",
+"aluno_panamenho": "res://resources/dialog/timelines/aluno_panamenho.dch",
+"aluno_quadrado": "res://resources/dialog/timelines/aluno_quadrado.dch",
+"alunochines": "res://resources/dialog/timelines/alunochines.dch",
 "brad": "res://resources/dialog/chars/brad.dch",
 "prof_sabio": "res://resources/dialog/chars/prof_sabio.dch"
 }

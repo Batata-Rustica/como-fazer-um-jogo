@@ -1,6 +1,36 @@
 join prof_sabio 1 [animation="Fade In Up" wait="true"]
+join brad 1
 prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
 prof_sabio: Assim que terminar iriei inicar a aula.
 prof_sabio: Por enquanto, explore a sala...
 prof_sabio: passe nas mesas dos seus colegas de classe...
 prof_sabio: conheça o pessoal!
+[wait time="7.0"]
+join alunochines 1 [animation="Fade In Up" wait="true"]
+join aluno_panamenho 1
+join aluno_ingles 1
+join aluno_de_algum_pais_da_africa 1
+join aluno_japones 1
+join aluno_flamenguista 1
+join aluno_quadrado 1
+join aluno_argentino 1
+prof_sabio: Então pessoal, vamos começar a aula!
+[wait time="1.0"]
+prof_sabio: O objetivo dessa disciplina é desenvolver um jogo!
+prof_sabio: Aqui nós seguiremos as seguintes regras\:
+prof_sabio: Entregar os jogos na data prevista!
+prof_sabio: Outra regra essencial é que não pode ficar sozinho. Formem grupos de até 3 jogadores!
+alunochines: Professor, pode ser grupos de quatro pessoas?
+[wait time="2.0"]
+prof_sabio: Não! No máximo 3 pessoas!
+brad: Olá tudo bem? Eu sou novo na turma, vocês posso me juntar a vocês?
+aluno_argentino: Oi, tudo bem sim, e com você? Infelizmente nosso grupo está completo
+aluno_ingles: Tente falar com o grupo ao lado
+alunochines: Oi, tudo bem? Vi que você está sem grupo. Você pode fazer parte do nosso grupo se quiser...
+alunochines: Estamos em 2 pessoas no momento
+brad: Eu aceito sim! Obrigado pelo convite...
+alunochines: Meu nome é Wang Li e essa é a Jose.
+aluno_panamenho: Oi tudo bem? Prazer! Bem vindo ao nosso grupo ...
+prof_sabio: Agora que os grupos estão formados
+[wait time="3.0"]
+prof_sabio: Agora que os grupos estão formados
