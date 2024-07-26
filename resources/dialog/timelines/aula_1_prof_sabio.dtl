@@ -33,4 +33,17 @@ alunochines: Meu nome é Wang Li e essa é a Jose.
 aluno_panamenho: Oi tudo bem? Prazer! Bem vindo ao nosso grupo ...
 prof_sabio: Agora que os grupos estão formados
 [wait time="3.0"]
-prof_sabio: Agora que os grupos estão formados
+prof_sabio: Agora que os grupos estão formados vocês devem decidir o nome do grupo e elegerem um líder
+aluno_panamenho: Eu creio que a Wang Li é uma boa opção para ser a líder do nosso grupo, ela quem nos chamou para participar...
+brad: Concordo plenamente, já começou com ato de liderança
+brad: Eu tenho uma boa idéia para o nome do grupo, que tal algo engraçado algo cômico e que todos nós gostamos?\
+
+aluno_panamenho: Não gosto muito da ideia, pensei em algo mais normal, que retrada algo mais antifo, mais rústico ...
+aluno_panamenho: Nossa que cheiro de comida... 
+alunochines: Estou comendo uma batata.
+brad: Batata Rústica?
+prof_sabio: Gostei do nome pessoal! Parabéns!
+[wait time="2.5"]
+prof_sabio: É hora das ideias. Vocês foram contratados e precisam criar ideias para um jogo
+prof_sabio: Façam o Brainstorm
+[end_timeline]
