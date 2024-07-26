@@ -22,7 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 Global="*res://scripts/Global.gd"
-BackgroundMusic="*res://scenes/background_music.gd"
+BackgroundMusic="*res://scripts/background_music.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

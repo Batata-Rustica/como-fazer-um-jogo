@@ -23,3 +23,7 @@ func _process(_delta):
 				self.stream = MUSIC_4
 		self.play(randf_range(0.0, 100.0))
 		Global.change_music = 0
+
+
+func _on_finished():
+	self.play(randf_range(0.0, 100.0))

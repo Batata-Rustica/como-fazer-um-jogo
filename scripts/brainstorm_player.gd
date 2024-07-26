@@ -1,6 +1,11 @@
 extends CharacterBody2D
 
-@export var score = 0
+@export var score: int = 0
+@onready var gamewin = $"../gamewin"
+@onready var gameover_wait = $"../gameover_wait"
+@onready var score_label = $"../gameover/score"
+@onready var spawner = $"../spawner"
+
 
 const speed = 600
 
@@ -52,8 +57,18 @@ func player_movement():
 
 func _on_collecting_area_body_entered(body):
 	if body.has_method("idea"):
-		score += 10
+		score += 20
+		check_win()
 		body.queue_free()
 	elif body.has_method("spark"):
-		score -= 15
+		score -= score/2
 		body.queue_free()
+
+func check_win():
+	if (score >= 500):
+		gamewin.visible = true
+		spawner.queue_free()
+		gameover_wait.start()
+
+func _on_gameover_visibility_changed():
+	score_label.text = "Fim de jogo\nScore: " + str(score)

@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnkxx8srne8fv"]
+[gd_scene load_steps=16 format=3 uid="uid://dnkxx8srne8fv"]
 
 [ext_resource type="Script" path="res://scripts/brainstorm_minigame.gd" id="1_54v3k"]
 [ext_resource type="Texture2D" uid="uid://2g1ql7iat3yd" path="res://resources/objects/fachada_inf.png" id="2_2baxh"]
 [ext_resource type="PackedScene" uid="uid://b4kjyydmrqtcg" path="res://scenes/main/brainstorm_player.tscn" id="2_moe4x"]
 [ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="3_kylc6"]
-[ext_resource type="Texture2D" uid="uid://dhlwpn0qblv7n" path="res://resources/objects/cloud.png" id="3_u8dm7"]
+[ext_resource type="Texture2D" uid="uid://bju8i3gnhwjqg" path="res://resources/objects/extras.png" id="4_58rbt"]
 [ext_resource type="PackedScene" uid="uid://d4lxkfvdw6gii" path="res://scenes/objects/brainstorm_spawner.tscn" id="4_66te8"]
 [ext_resource type="Script" path="res://scripts/objects/object_deleter.gd" id="5_art8l"]
+[ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="8_5lwvo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c4j5m"]
 font = ExtResource("3_kylc6")
@@ -26,6 +27,13 @@ size = Vector2(67, 285)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_byw6l"]
 size = Vector2(28.2315, 28.5508)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jrki"]
+line_spacing = 1.0
+font = ExtResource("8_5lwvo")
+font_size = 500
+outline_size = 50
+outline_color = Color(0.14902, 0.14902, 0.14902, 1)
 
 [node name="brainstorm_minigame" type="Node2D"]
 z_index = 3
@@ -53,6 +61,24 @@ offset_right = 164.0
 offset_bottom = -150.0
 scale = Vector2(-0.255554, 1.18261)
 text = "Score: "
+label_settings = SubResource("LabelSettings_c4j5m")
+
+[node name="Extras" type="Sprite2D" parent="Camera2D"]
+position = Vector2(100.373, -163.569)
+rotation = 3.14158
+scale = Vector2(0.392083, -2.02292)
+skew = 1.2517e-05
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(6, 32, 20, 16)
+
+[node name="hearts_label" type="Label" parent="Camera2D"]
+offset_left = 94.9961
+offset_top = -175.707
+offset_right = 113.996
+offset_bottom = -153.707
+scale = Vector2(-0.255554, 1.18261)
+text = "3"
 label_settings = SubResource("LabelSettings_c4j5m")
 
 [node name="brainstorm_player" parent="." instance=ExtResource("2_moe4x")]
@@ -86,63 +112,120 @@ shape = SubResource("RectangleShape2D_byw6l")
 [node name="spawner" parent="." instance=ExtResource("4_66te8")]
 z_index = 3
 
-[node name="clopud_holder" type="Node2D" parent="."]
+[node name="cloud_holder" type="Node2D" parent="."]
 
-[node name="Cloud10" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud10" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(1937, 128)
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud9" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud9" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(302, 140)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud8" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud8" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(467, 200)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud7" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud7" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(701, 128)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud6" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud6" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(890, 188)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud5" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud5" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(1112, 137)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud4" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud4" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(1334, 185)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud3" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud3" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(1568, 134)
 rotation = -0.0250739
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud2" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud2" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(1769, 185)
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
 
-[node name="Cloud1" type="Sprite2D" parent="clopud_holder"]
+[node name="Cloud1" type="Sprite2D" parent="cloud_holder"]
 position = Vector2(106, 184)
 scale = Vector2(5, 5)
-texture = ExtResource("3_u8dm7")
+texture = ExtResource("4_58rbt")
+region_enabled = true
+region_rect = Rect2(35, 3, 59, 24)
+
+[node name="gameover" type="ColorRect" parent="."]
+visible = false
+offset_right = 2017.0
+offset_bottom = 1270.0
+color = Color(0.232715, 0.226103, 0.671544, 1)
+
+[node name="score" type="Label" parent="gameover"]
+layout_mode = 0
+offset_right = 2018.0
+offset_bottom = 1273.0
+text = "Fim de jogo
+Score:  "
+label_settings = SubResource("LabelSettings_4jrki")
+horizontal_alignment = 1
+
+[node name="gamewin" type="ColorRect" parent="."]
+visible = false
+offset_right = 2017.0
+offset_bottom = 1270.0
+color = Color(0.232715, 0.226103, 0.671544, 1)
+
+[node name="Label" type="Label" parent="gamewin"]
+layout_mode = 0
+offset_right = 2018.0
+offset_bottom = 1273.0
+text = "Você venceu!!!
+Parabéns :)"
+label_settings = SubResource("LabelSettings_4jrki")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gameover_wait" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
 
 [connection signal="body_entered" from="StaticBody2D/object_deleter" to="StaticBody2D/object_deleter" method="_on_body_entered"]
+[connection signal="visibility_changed" from="gameover" to="brainstorm_player" method="_on_gameover_visibility_changed"]
+[connection signal="timeout" from="gameover_wait" to="StaticBody2D/object_deleter" method="_on_gameover_wait_timeout"]

@@ -12,14 +12,19 @@ func _ready():
 			spawn_points.append(i)
 
 func _on_timer_timeout():
-	var spawn_point = spawn_points[randi() % spawn_points.size()]
+	var pos := randi() % spawn_points.size()
+	var spawn_point = spawn_points[pos]
 	
-	var object = choose_scene().instantiate()
+	var object = choose_scene(pos).instantiate()
 	object.position = spawn_point.position
 	self.add_child(object)
 	
-func choose_scene():
-	if randi() % 3 > 1:
+func choose_scene(pos):
+	# Nas pontas só pode chover raios, pois não dá tempo de percorrer
+	# para pegar um cérebro do outro lado do mapa
+	if (pos == 0 or pos == 1 or pos == 8 or pos == 9):
+		return SPARK
+	if randi() % 2 == 0:
 		return IDEA
 	else:
 		return SPARK
