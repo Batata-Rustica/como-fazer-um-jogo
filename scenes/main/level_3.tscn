@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmoatu13yaa5y"]
+[gd_scene load_steps=8 format=3 uid="uid://cmoatu13yaa5y"]
 
 [ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_mmyxg"]
 [ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_e1mn0"]
 [ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_b70l3"]
+[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_lnox4"]
+[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_4nwso"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr558"]
+bg_color = Color(0, 0, 0, 0.8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3kds"]
+font = ExtResource("4_4nwso")
+font_size = 41
 
 [node name="level_3" type="Node2D"]
 
@@ -11,6 +20,31 @@
 [node name="player" parent="." instance=ExtResource("2_e1mn0")]
 position = Vector2(96, -37)
 
+[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
+z_index = 6
+offset_left = -199.0
+offset_top = -116.0
+offset_right = 200.0
+offset_bottom = 116.0
+script = ExtResource("3_lnox4")
+
+[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wr558")
+
+[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 91.0
+offset_right = 331.0
+offset_bottom = 137.0
+text = "Semana 2"
+label_settings = SubResource("LabelSettings_g3kds")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="level_changer" parent="." instance=ExtResource("3_b70l3")]
 z_index = 2
 position = Vector2(778, -376)
+
+[editable path="player"]

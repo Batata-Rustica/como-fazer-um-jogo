@@ -5,3 +5,5 @@
 [node name="level_4" type="Node2D"]
 
 [node name="brainstorm_minigame" parent="." instance=ExtResource("1_2js1p")]
+
+[editable path="brainstorm_minigame"]

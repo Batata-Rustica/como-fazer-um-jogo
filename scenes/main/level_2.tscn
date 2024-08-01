@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://wyrmas8nygxq"]
+[gd_scene load_steps=9 format=3 uid="uid://wyrmas8nygxq"]
 
 [ext_resource type="PackedScene" uid="uid://68u2gnges7ur" path="res://scenes/levels/level_lab1.tscn" id="1_1r7yg"]
 [ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_85jai"]
+[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_2x0th"]
 [ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_fo54b"]
+[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_ki3dc"]
 [ext_resource type="PackedScene" uid="uid://c5xx8ddpm7rqp" path="res://scenes/main/npc.tscn" id="4_ydxov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl0yq"]
+bg_color = Color(0, 0, 0, 0.8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1x3pt"]
+font = ExtResource("4_ki3dc")
 
 [node name="level_2" type="Node2D"]
 
@@ -13,9 +21,35 @@ position = Vector2(-681, 180)
 [node name="player" parent="." instance=ExtResource("2_85jai")]
 position = Vector2(1031, 152)
 
+[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
+z_index = 6
+offset_left = -199.0
+offset_top = -116.0
+offset_right = 200.0
+offset_bottom = 116.0
+script = ExtResource("3_2x0th")
+
+[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gl0yq")
+
+[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 89.0
+offset_right = 335.0
+offset_bottom = 135.0
+text = "interaja com o professor
+e com os outros alunos"
+label_settings = SubResource("LabelSettings_1x3pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="level_changer" parent="." instance=ExtResource("3_fo54b")]
 z_index = 2
 position = Vector2(1024, 124)
 
 [node name="npc" parent="." instance=ExtResource("4_ydxov")]
 position = Vector2(1002, 256)
+
+[editable path="player"]

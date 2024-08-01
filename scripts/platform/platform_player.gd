@@ -28,6 +28,8 @@ func _ready():
 	can_get_hit = true
 	Global.player_alive = true
 	health = max_health
+	$collision.position.y = 8
+	$collision.position.x = -2
 
 func _process(delta):
 	if Input.is_action_pressed("force_exit"): 
@@ -110,7 +112,7 @@ func get_hit_cd(wait_time):
 
 func handle_death_animation():
 	sprite.play("death")
-	$collision.position.y = 5
+	$collision.position.y += 5
 	var i = 1
 	self.set_collision_layer_value(1, false)
 	Engine.time_scale = .5
