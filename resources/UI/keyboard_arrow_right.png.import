@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hjppmxnsi536"
-path="res://.godot/imported/egrilojapinha.png-8c469563957ae94f748512bc9c6c8396.ctex"
+uid="uid://c77120fydkex3"
+path="res://.godot/imported/keyboard_arrow_right.png-9d70a75295a231dac877c88962d66180.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/egrilojapinha.png"
-dest_files=["res://.godot/imported/egrilojapinha.png-8c469563957ae94f748512bc9c6c8396.ctex"]
+source_file="res://resources/UI/keyboard_arrow_right.png"
+dest_files=["res://.godot/imported/keyboard_arrow_right.png-9d70a75295a231dac877c88962d66180.ctex"]
 
 [params]
 

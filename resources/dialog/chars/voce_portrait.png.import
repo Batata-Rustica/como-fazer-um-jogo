@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bagfp645w1i0s"
-path="res://.godot/imported/flamenguista.png-cdc7e6ec74e06d0ecb2887bf9d5a6273.ctex"
+uid="uid://ctvnnscpoqgpi"
+path="res://.godot/imported/voce_portrait.png-611a0dc57649b80d1f5f992f5df71447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/flamenguista.png"
-dest_files=["res://.godot/imported/flamenguista.png-cdc7e6ec74e06d0ecb2887bf9d5a6273.ctex"]
+source_file="res://resources/dialog/chars/voce_portrait.png"
+dest_files=["res://.godot/imported/voce_portrait.png-611a0dc57649b80d1f5f992f5df71447.ctex"]
 
 [params]
 

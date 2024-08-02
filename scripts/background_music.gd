@@ -24,6 +24,13 @@ func _process(_delta):
 		self.play(randf_range(0.0, 100.0))
 		Global.change_music = 0
 
+func random_music():
+	var music = randi() % 4 + 1
+	if (music == 1): return MUSIC_1
+	if (music == 2): return MUSIC_2
+	if (music == 3): return MUSIC_3
+	if (music == 4): return MUSIC_4
 
 func _on_finished():
+	self.stream = random_music()
 	self.play(randf_range(0.0, 100.0))

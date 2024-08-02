@@ -19,4 +19,8 @@ func check_gameover():
 		gameover_wait.start()
 
 func _on_gameover_wait_timeout():
-	get_tree().change_scene_to_file("res://scenes/main/level_5.tscn")
+	if (Global.hearts == 0):
+		Global.hearts = 3
+		get_tree().change_scene_to_file("res://scenes/main/level_3.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/main/level_4.tscn")

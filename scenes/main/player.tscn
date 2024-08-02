@@ -1,10 +1,16 @@
-[gd_scene load_steps=38 format=3 uid="uid://seesw4dwuuod"]
+[gd_scene load_steps=44 format=3 uid="uid://seesw4dwuuod"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kqcuf"]
 [ext_resource type="Texture2D" uid="uid://dhjmj1j16l0l3" path="res://resources/character/player_sprites.png" id="2_oap72"]
 [ext_resource type="AudioStream" uid="uid://btfefae0h0m72" path="res://resources/sounds/ambiance/zapsplat_foley_footsteps_boots_gumboots_wellingtons_adults_walking_on_concrete_medium_fast_109731.mp3" id="3_a43t8"]
-[ext_resource type="Texture2D" uid="uid://bag3xul8ggjhw" path="res://resources/UI/right_click.png" id="3_x0xri"]
+[ext_resource type="Texture2D" uid="uid://e7ihvxlv5va0" path="res://resources/UI/mouse_right.png" id="3_oq3ne"]
 [ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="4_doosa"]
+[ext_resource type="Texture2D" uid="uid://dbso06ss1pciq" path="res://resources/UI/keyboard_arrows_none.png" id="5_m01ev"]
+[ext_resource type="Texture2D" uid="uid://b6ojr8dv6misg" path="res://resources/UI/keyboard_shift_icon_outline.png" id="5_xa56l"]
+[ext_resource type="Texture2D" uid="uid://dne0hxh8cdqyr" path="res://resources/UI/keyboard_arrow_up.png" id="6_3akgp"]
+[ext_resource type="Texture2D" uid="uid://pfcqyo7nnto7" path="res://resources/UI/keyboard_arrow_down.png" id="7_voi06"]
+[ext_resource type="Texture2D" uid="uid://dti7u7c8njfw8" path="res://resources/UI/keyboard_arrow_left.png" id="8_s4ivo"]
+[ext_resource type="Texture2D" uid="uid://c77120fydkex3" path="res://resources/UI/keyboard_arrow_right.png" id="9_crbc1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcggq"]
 radius = 6.0
@@ -421,22 +427,100 @@ parameters/walk/blend_position = Vector2(0, 0)
 z_index = 5
 zoom = Vector2(5, 5)
 
-[node name="TextureRect" type="TextureRect" parent="camera"]
-offset_left = -183.0
-offset_top = 85.0
-offset_right = -173.0
-offset_bottom = 112.0
-texture = ExtResource("3_x0xri")
+[node name="click" type="TextureRect" parent="camera"]
+offset_left = -187.0
+offset_top = 74.0
+offset_right = -176.0
+offset_bottom = 85.0
+texture = ExtResource("3_oq3ne")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="camera"]
+[node name="click_label" type="Label" parent="camera/click"]
 texture_filter = 5
-offset_left = -167.0
-offset_top = 83.0
-offset_right = -137.0
-offset_bottom = 97.0
+layout_mode = 0
+offset_left = 15.0
+offset_top = -2.0
+offset_right = 47.0
+offset_bottom = 12.0
 text = "Interagir"
+label_settings = SubResource("LabelSettings_um24s")
+
+[node name="run" type="TextureRect" parent="camera"]
+offset_left = -187.0
+offset_top = 96.0
+offset_right = -176.0
+offset_bottom = 107.0
+texture = ExtResource("5_xa56l")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="click_label" type="Label" parent="camera/run"]
+texture_filter = 5
+layout_mode = 0
+offset_left = 15.0
+offset_top = -3.0
+offset_right = 47.0
+offset_bottom = 11.0
+text = "Correr"
+label_settings = SubResource("LabelSettings_um24s")
+
+[node name="move" type="TextureRect" parent="camera"]
+offset_left = -189.0
+offset_top = 83.0
+offset_right = -174.0
+offset_bottom = 98.0
+texture = ExtResource("5_m01ev")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="up" type="TextureRect" parent="camera/move"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 10.0
+offset_bottom = 8.0
+texture = ExtResource("6_3akgp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="down" type="TextureRect" parent="camera/move"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 10.0
+offset_bottom = 12.0
+texture = ExtResource("7_voi06")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="left" type="TextureRect" parent="camera/move"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 6.0
+offset_bottom = 12.0
+texture = ExtResource("8_s4ivo")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="right" type="TextureRect" parent="camera/move"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 14.0
+offset_bottom = 12.0
+texture = ExtResource("9_crbc1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="move_label" type="Label" parent="camera/move"]
+texture_filter = 5
+layout_mode = 0
+offset_left = 17.0
+offset_right = 49.0
+offset_bottom = 14.0
+text = "Andar"
 label_settings = SubResource("LabelSettings_um24s")
 
 [node name="player_audios" type="Node" parent="."]

@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var spawner = $"../spawner"
 
 
-const speed = 600
+const speed = 650
 
 const acceleration = 100
 const friction = 130
@@ -20,8 +20,6 @@ func _process(_delta):
 		get_tree().quit()
 		#apertar Ctrl+Q ou Select (joystick) fecha a cena do player
 
-func _ready():
-	pass # Replace with function body.
 
 func _physics_process(delta):
 	var input_dir: Vector2 = input()
@@ -65,10 +63,11 @@ func _on_collecting_area_body_entered(body):
 		body.queue_free()
 
 func check_win():
-	if (score >= 500):
+	if (score >= 100):
 		gamewin.visible = true
 		spawner.queue_free()
 		gameover_wait.start()
 
+
 func _on_gameover_visibility_changed():
-	score_label.text = "Fim de jogo\nScore: " + str(score)
+	score_label.text = "Fim de jogo :(\nTente novamente!\nScore: " + str(score)

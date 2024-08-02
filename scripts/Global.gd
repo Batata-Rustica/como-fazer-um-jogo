@@ -18,3 +18,7 @@ var platform_score_history: int
 func brainstorm_entered():
 	change_music = 1
 	music_playing = 2
+
+func brainstorm_exit():
+	change_music = 1
+	music_playing = 1

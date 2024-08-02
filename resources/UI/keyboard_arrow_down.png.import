@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ql5m2v1c5dc"
-path="res://.godot/imported/africa.png-77398ff3c3bb5f13ff161f2310386f62.ctex"
+uid="uid://pfcqyo7nnto7"
+path="res://.godot/imported/keyboard_arrow_down.png-fb038be4e78ac7b83fd87218ed2903f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/africa.png"
-dest_files=["res://.godot/imported/africa.png-77398ff3c3bb5f13ff161f2310386f62.ctex"]
+source_file="res://resources/UI/keyboard_arrow_down.png"
+dest_files=["res://.godot/imported/keyboard_arrow_down.png-fb038be4e78ac7b83fd87218ed2903f7.ctex"]
 
 [params]
 

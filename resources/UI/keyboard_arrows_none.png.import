@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccyu52hifjlln"
-path="res://.godot/imported/chinatown.png-a265b73786a230b5c39dc0c6d1fc75bb.ctex"
+uid="uid://dbso06ss1pciq"
+path="res://.godot/imported/keyboard_arrows_none.png-12b3b4a0143745552a7edcce1026d0ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/chinatown.png"
-dest_files=["res://.godot/imported/chinatown.png-a265b73786a230b5c39dc0c6d1fc75bb.ctex"]
+source_file="res://resources/UI/keyboard_arrows_none.png"
+dest_files=["res://.godot/imported/keyboard_arrows_none.png-12b3b4a0143745552a7edcce1026d0ff.ctex"]
 
 [params]
 

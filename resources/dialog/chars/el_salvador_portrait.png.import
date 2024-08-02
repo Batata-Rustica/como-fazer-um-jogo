@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk7h0wyv7oyy5"
-path="res://.godot/imported/quadrado.png-900f759446c59e6e837c85159310b1cc.ctex"
+uid="uid://byhi8v33f7i3o"
+path="res://.godot/imported/el_salvador_portrait.png-4542c6e8cb9ff694cfb09f218b8fce99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/quadrado.png"
-dest_files=["res://.godot/imported/quadrado.png-900f759446c59e6e837c85159310b1cc.ctex"]
+source_file="res://resources/dialog/chars/el_salvador_portrait.png"
+dest_files=["res://.godot/imported/el_salvador_portrait.png-4542c6e8cb9ff694cfb09f218b8fce99.ctex"]
 
 [params]
 

@@ -20,7 +20,9 @@ overrides = {
 [sub_resource type="Resource" id="Resource_mnay2"]
 script = ExtResource("2_k0vf6")
 scene = ExtResource("3_xyacj")
-overrides = {}
+overrides = {
+"text_custom_size": "20.0"
+}
 
 [sub_resource type="Resource" id="Resource_ngylo"]
 script = ExtResource("2_k0vf6")
@@ -57,4 +59,4 @@ base_overrides = {
 "global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
 }
 layers = Array[ExtResource("2_k0vf6")]([SubResource("Resource_b7f4f"), SubResource("Resource_mnay2"), SubResource("Resource_ngylo"), SubResource("Resource_deld8"), SubResource("Resource_exe7o"), SubResource("Resource_8g1ap"), SubResource("Resource_bhah1")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = 1

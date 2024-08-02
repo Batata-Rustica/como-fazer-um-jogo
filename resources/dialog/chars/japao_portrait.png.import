@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b68jmvgww220g"
-path="res://.godot/imported/dizendo_o_brian_e_panamenha.png-6ed56dce8ffb8cd8866ee78814128aea.ctex"
+uid="uid://hjppmxnsi536"
+path="res://.godot/imported/japao_portrait.png-66d631a2a9bcb43227fa47da161e0292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/dizendo_o_brian_e_panamenha.png"
-dest_files=["res://.godot/imported/dizendo_o_brian_e_panamenha.png-6ed56dce8ffb8cd8866ee78814128aea.ctex"]
+source_file="res://resources/dialog/chars/japao_portrait.png"
+dest_files=["res://.godot/imported/japao_portrait.png-66d631a2a9bcb43227fa47da161e0292.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byhi8v33f7i3o"
-path="res://.godot/imported/argentino.png-6439297a2bb643465e77946ddab8ea12.ctex"
+uid="uid://bxswsrj3jwxq5"
+path="res://.godot/imported/keyboard_arrows_horizontal.png-750517097439c880688c927a9a151ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dialog/timelines/argentino.png"
-dest_files=["res://.godot/imported/argentino.png-6439297a2bb643465e77946ddab8ea12.ctex"]
+source_file="res://resources/UI/keyboard_arrows_horizontal.png"
+dest_files=["res://.godot/imported/keyboard_arrows_horizontal.png-750517097439c880688c927a9a151ebb.ctex"]
 
 [params]
 

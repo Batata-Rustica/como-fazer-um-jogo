@@ -12,5 +12,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	score_label.text="Score: " + str(brainstorm_player.score)
+	score_label.text="Score: " + str(brainstorm_player.score) + "/500"
 	hearts_label.text = str(Global.hearts)

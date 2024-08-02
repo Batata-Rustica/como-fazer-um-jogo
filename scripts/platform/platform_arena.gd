@@ -2,13 +2,14 @@ extends Node2D
 
 @onready var panel = $game_over_screen
 @onready var label = $game_over_screen/Label
-
+const sword = preload("res://resources/UI/tool_sword_a.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.weapon_equipped = true
 	$platform_player/Camera2D.zoom.y = 6
 	$platform_player/Camera2D.zoom.x = 6
+	Input.set_custom_mouse_cursor(sword)
 
 func _process(delta):
 	if $platform_player != null:

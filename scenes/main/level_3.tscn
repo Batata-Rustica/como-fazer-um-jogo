@@ -1,50 +1,116 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmoatu13yaa5y"]
+[gd_scene load_steps=9 format=3 uid="uid://p1xt05x7064s"]
 
-[ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_mmyxg"]
-[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_e1mn0"]
-[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_b70l3"]
-[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_lnox4"]
-[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_4nwso"]
+[ext_resource type="PackedScene" uid="uid://dnkxx8srne8fv" path="res://scenes/levels/brainstorm_minigame.tscn" id="1_3piiy"]
+[ext_resource type="Texture2D" uid="uid://bxswsrj3jwxq5" path="res://resources/UI/keyboard_arrows_horizontal.png" id="2_qmiyi"]
+[ext_resource type="Texture2D" uid="uid://dti7u7c8njfw8" path="res://resources/UI/keyboard_arrow_left.png" id="3_gjxhu"]
+[ext_resource type="Texture2D" uid="uid://c77120fydkex3" path="res://resources/UI/keyboard_arrow_right.png" id="4_oolox"]
+[ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="5_1lt24"]
+[ext_resource type="Texture2D" uid="uid://b6ojr8dv6misg" path="res://resources/UI/keyboard_shift_icon_outline.png" id="6_ri5kl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr558"]
-bg_color = Color(0, 0, 0, 0.8)
+[sub_resource type="LabelSettings" id="LabelSettings_hbotr"]
+line_spacing = 1.0
+font = ExtResource("5_1lt24")
+font_size = 64
+outline_size = 4
+outline_color = Color(0.147672, 0.147672, 0.147672, 1)
+shadow_size = 4
+shadow_color = Color(0.154876, 0.154876, 0.154876, 0)
 
-[sub_resource type="LabelSettings" id="LabelSettings_g3kds"]
-font = ExtResource("4_4nwso")
-font_size = 41
+[sub_resource type="LabelSettings" id="LabelSettings_lmlxi"]
+line_spacing = 1.0
+font = ExtResource("5_1lt24")
+font_size = 64
+outline_size = 4
+outline_color = Color(0.147672, 0.147672, 0.147672, 1)
+shadow_size = 4
+shadow_color = Color(0.154876, 0.154876, 0.154876, 0)
 
 [node name="level_3" type="Node2D"]
 
-[node name="level_terrain" parent="." instance=ExtResource("1_mmyxg")]
+[node name="brainstorm_minigame" parent="." instance=ExtResource("1_3piiy")]
 
-[node name="player" parent="." instance=ExtResource("2_e1mn0")]
-position = Vector2(96, -37)
+[node name="score" parent="brainstorm_minigame/gameover" index="0"]
+visible = true
+text = "Fim de jogo :(
+Tente novamente!
+Score:  "
 
-[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
-z_index = 6
-offset_left = -199.0
-offset_top = -116.0
-offset_right = 200.0
-offset_bottom = 116.0
-script = ExtResource("3_lnox4")
+[node name="Label" parent="brainstorm_minigame/gamewin" index="0"]
+visible = true
 
-[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wr558")
+[node name="ColorRect2" type="ColorRect" parent="brainstorm_minigame"]
+offset_left = 41.0
+offset_top = 1080.0
+offset_right = 252.0
+offset_bottom = 1191.0
+color = Color(0.2, 0.2, 0.2, 0.807843)
 
-[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
+[node name="move" type="TextureRect" parent="brainstorm_minigame/ColorRect2"]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 91.0
-offset_right = 331.0
-offset_bottom = 137.0
-text = "Semana 2"
-label_settings = SubResource("LabelSettings_g3kds")
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -2.0
+offset_top = -17.0
+offset_right = 98.0
+offset_bottom = 83.0
+texture = ExtResource("2_qmiyi")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="level_changer" parent="." instance=ExtResource("3_b70l3")]
-z_index = 2
-position = Vector2(778, -376)
+[node name="left" type="TextureRect" parent="brainstorm_minigame/ColorRect2/move"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 46.0
+offset_right = 41.0
+offset_bottom = 78.0
+texture = ExtResource("3_gjxhu")
+expand_mode = 1
+stretch_mode = 4
 
-[editable path="player"]
+[node name="right" type="TextureRect" parent="brainstorm_minigame/ColorRect2/move"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 46.0
+offset_right = 91.0
+offset_bottom = 78.0
+texture = ExtResource("4_oolox")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="move_label" type="Label" parent="brainstorm_minigame/ColorRect2/move"]
+texture_filter = 5
+layout_mode = 0
+offset_left = 109.0
+offset_top = 27.0
+offset_right = 189.0
+offset_bottom = 82.0
+text = "Andar"
+label_settings = SubResource("LabelSettings_hbotr")
+
+[node name="ColorRect" type="ColorRect" parent="brainstorm_minigame/ColorRect2"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 70.0
+offset_right = 66.0
+offset_bottom = 97.0
+color = Color(0.905882, 0.196078, 0.27451, 1)
+
+[node name="run" type="TextureRect" parent="brainstorm_minigame/ColorRect2/ColorRect"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 35.0
+texture = ExtResource("6_ri5kl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="click_label" type="Label" parent="brainstorm_minigame/ColorRect2/ColorRect/run"]
+texture_filter = 5
+layout_mode = 0
+offset_left = 71.0
+offset_top = -10.0
+offset_right = 167.0
+offset_bottom = 45.0
+text = "Correr"
+label_settings = SubResource("LabelSettings_lmlxi")
+
+[editable path="brainstorm_minigame"]

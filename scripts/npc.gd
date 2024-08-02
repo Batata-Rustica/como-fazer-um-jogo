@@ -5,7 +5,6 @@ var player_can_dialog = false
 var force_dialog = false
 @onready var dialog_starter = $dialog_starter
 
-
 func _ready():
 	if npc_dialog == "introduction":
 		force_dialog = true
@@ -33,5 +32,3 @@ func start_dialog(timeline_name):
 
 func timeline_end():
 		force_dialog = false
-		print(force_dialog)
-

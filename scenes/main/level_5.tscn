@@ -1,50 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://do5u6rknommrl"]
+[gd_scene load_steps=3 format=3 uid="uid://crgteqf04snpi"]
 
-[ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_52675"]
-[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_to65a"]
-[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_3b2xs"]
-[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_4ayrv"]
-[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_yudcw"]
+[ext_resource type="PackedScene" uid="uid://c0ubu8qpmgabf" path="res://scenes/platform/platform_base.tscn" id="1_cdkml"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="2_p53lo"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slpln"]
-bg_color = Color(0, 0, 0, 0.8)
+[node name="platform_base" instance=ExtResource("1_cdkml")]
 
-[sub_resource type="LabelSettings" id="LabelSettings_iatcw"]
-font = ExtResource("4_yudcw")
-font_size = 41
-
-[node name="level_5" type="Node2D"]
-
-[node name="level_terrain" parent="." instance=ExtResource("1_52675")]
-
-[node name="player" parent="." instance=ExtResource("2_to65a")]
-position = Vector2(96, -37)
-
-[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
-z_index = 6
-offset_left = -199.0
-offset_top = -116.0
-offset_right = 200.0
-offset_bottom = 116.0
-script = ExtResource("3_4ayrv")
-
-[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_slpln")
-
-[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 96.0
-offset_right = 330.0
-offset_bottom = 142.0
-text = "Semana 3"
-label_settings = SubResource("LabelSettings_iatcw")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="level_changer" parent="." instance=ExtResource("3_3b2xs")]
-z_index = 2
-position = Vector2(778, -376)
-
-[editable path="player"]
+[node name="level_changer" parent="." index="5" instance=ExtResource("2_p53lo")]
+position = Vector2(489, 340)
+scale = Vector2(8.60239, -1.6131)

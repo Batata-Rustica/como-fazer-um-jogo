@@ -31,7 +31,7 @@ size = Vector2(28.2315, 28.5508)
 [sub_resource type="LabelSettings" id="LabelSettings_4jrki"]
 line_spacing = 1.0
 font = ExtResource("8_5lwvo")
-font_size = 500
+font_size = 400
 outline_size = 50
 outline_color = Color(0.14902, 0.14902, 0.14902, 1)
 
@@ -198,10 +198,12 @@ offset_bottom = 1270.0
 color = Color(0.232715, 0.226103, 0.671544, 1)
 
 [node name="score" type="Label" parent="gameover"]
+visible = false
 layout_mode = 0
 offset_right = 2018.0
 offset_bottom = 1273.0
-text = "Fim de jogo
+text = "Fim de jogo 😢
+Tente novamente
 Score:  "
 label_settings = SubResource("LabelSettings_4jrki")
 horizontal_alignment = 1
@@ -213,6 +215,7 @@ offset_bottom = 1270.0
 color = Color(0.232715, 0.226103, 0.671544, 1)
 
 [node name="Label" type="Label" parent="gamewin"]
+visible = false
 layout_mode = 0
 offset_right = 2018.0
 offset_bottom = 1273.0

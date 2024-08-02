@@ -567,6 +567,10 @@ separation = Vector2i(1, 1)
 23:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 23:12/0/physics_layer_0/angular_velocity = 0.0
 23:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 4, -5, 4, 8, -5, 8)
+13:10/0 = 0
+13:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+13:10/0/physics_layer_0/angular_velocity = 0.0
+13:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_gc1nc"]
 uv_clipping = true

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var state_machine
+@export var stop = false
 const speed = 100
 const run_multiplier = 2
 const acceleration = 0.2
@@ -18,9 +19,10 @@ func _process(_delta):
 		#apertar Ctrl+Q ou Select (joystick) fecha a cena do player
 
 func _physics_process(_delta):
-	move()
-	animate()
-	move_and_slide()
+	if (not stop):
+		move()
+		animate()
+		move_and_slide()
 	
 func move():
 	var direction = Input.get_vector("left", "right", "up", "down")
