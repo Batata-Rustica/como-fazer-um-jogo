@@ -14,7 +14,8 @@ var player: CharacterBody2D
 const speed = 30
 var direction: Vector2
 
-
+signal death
+var sent: bool = false
 
 func _ready():
 	is_chasing = true
@@ -90,6 +91,10 @@ func take_damage(damage):
 	if health < 0:
 		health = 0
 		dead = true
+		if (not sent):
+			self.emit_signal("death")
+			sent = true
+			print("death")
 
 func flying_enemy():
 	pass

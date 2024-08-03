@@ -63,7 +63,7 @@ func _on_collecting_area_body_entered(body):
 		body.queue_free()
 
 func check_win():
-	if (score >= 100):
+	if (score >= 500):
 		gamewin.visible = true
 		spawner.queue_free()
 		gameover_wait.start()

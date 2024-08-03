@@ -84,7 +84,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="level_7" type="Node2D"]
+[node name="level_6" type="Node2D"]
 
 [node name="platform_arena" parent="." instance=ExtResource("1_7hn6r")]
 
@@ -104,5 +104,15 @@ sprite_frames = SubResource("SpriteFrames_lft2t")
 animation = &"walking"
 autoplay = "walking"
 frame_progress = 0.569706
+
+[connection signal="death" from="platform_arena/flying_enemy" to="platform_arena" method="_on_flying_enemy_death"]
+[connection signal="death" from="platform_arena/flying_enemy2" to="platform_arena" method="_on_flying_enemy_2_death"]
+[connection signal="death" from="platform_arena/flying_enemy3" to="platform_arena" method="_on_flying_enemy_3_death"]
+[connection signal="death" from="platform_arena/flying_enemy4" to="platform_arena" method="_on_flying_enemy_4_death"]
+[connection signal="death" from="platform_arena/flying_enemy5" to="platform_arena" method="_on_flying_enemy_5_death"]
+[connection signal="death" from="platform_arena/flying_enemy6" to="platform_arena" method="_on_flying_enemy_6_death"]
+[connection signal="death" from="platform_arena/flying_enemy7" to="platform_arena" method="_on_flying_enemy_7_death"]
+[connection signal="death" from="platform_arena/flying_enemy8" to="platform_arena" method="_on_flying_enemy_8_death"]
+[connection signal="death" from="platform_arena/flying_enemy9" to="platform_arena" method="_on_flying_enemy_9_death"]
 
 [editable path="platform_arena"]
