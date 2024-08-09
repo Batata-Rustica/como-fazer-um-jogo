@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c0nj2fyucb7f0" path="res://scenes/platform/platform_arena.tscn" id="1_7hn6r"]
 [ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="2_o7eix"]
-[ext_resource type="Texture2D" uid="uid://d0drwem8db5lj" path="res://resources/character/platform/enemy_platform.png" id="3_0etdp"]
+[ext_resource type="Texture2D" uid="uid://75opyfncecbs" path="res://resources/character/platform/enemy_platform.png" id="3_0etdp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m5wy7"]
 font = ExtResource("2_o7eix")

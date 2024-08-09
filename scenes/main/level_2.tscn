@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://wyrmas8nygxq"]
+[gd_scene load_steps=22 format=3 uid="uid://wyrmas8nygxq"]
 
 [ext_resource type="PackedScene" uid="uid://68u2gnges7ur" path="res://scenes/levels/level_lab1.tscn" id="1_1r7yg"]
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_bmnl3"]
@@ -7,6 +7,110 @@
 [ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_fo54b"]
 [ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_ki3dc"]
 [ext_resource type="PackedScene" uid="uid://c5xx8ddpm7rqp" path="res://scenes/main/npc.tscn" id="4_ydxov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4rb"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_nsluf"]
+resource_name = "DEFAULT"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_styles/panel:bg_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+
+[sub_resource type="Animation" id="Animation_qv6lb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_styles/panel:bg_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykm15"]
+_data = {
+"DEFAULT": SubResource("Animation_nsluf"),
+"RESET": SubResource("Animation_qv6lb")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl0yq"]
 bg_color = Color(0, 0, 0, 0.8)
@@ -56,7 +160,19 @@ layer_2/tile_data = PackedInt32Array(393303, 65538, 8, 393304, 65538, 8, 393305,
 [node name="player" parent="." instance=ExtResource("2_85jai")]
 position = Vector2(1031, 152)
 
-[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
+[node name="transition_container" type="PanelContainer" parent="player/camera" index="0"]
+offset_left = -202.0
+offset_top = -120.0
+offset_right = 203.0
+offset_bottom = 122.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_md4rb")
+
+[node name="transition" type="AnimationPlayer" parent="player/camera/transition_container"]
+libraries = {
+"": SubResource("AnimationLibrary_ykm15")
+}
+
+[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="3"]
 z_index = 6
 offset_left = -199.0
 offset_top = -116.0
@@ -188,6 +304,9 @@ region_rect = Rect2(113, 2, 14, 27)
 
 [node name="CollisionShape2D" parent="team3/panama/dialog_starter" index="0"]
 shape = SubResource("CapsuleShape2D_xxrct")
+
+[node name="after_dialog" type="Marker2D" parent="."]
+position = Vector2(368, 220)
 
 [editable path="player"]
 [editable path="level_changer"]

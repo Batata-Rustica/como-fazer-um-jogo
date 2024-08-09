@@ -2,10 +2,7 @@ join prof_sabio 1 [animation="Fade In Up" wait="true"]
 join voce (voce) 1 [animation="Fade In Up"]
 prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
 prof_sabio: Assim que terminar iriei inicar a aula.
-prof_sabio: Por enquanto, explore a sala...\
-Passe nas mesas dos seus colegas de classe...\
-Conheça o pessoal!
-[wait time="1.0"]
+prof_sabio: <Empty Text Event>
 join china 1 [animation="Fade In Up" wait="true"]
 join panama 1
 join islandia 1
@@ -21,7 +18,6 @@ prof_sabio: Aqui nós seguiremos as seguintes regras\:\
 - Outra regra essencial é que não pode ficar sozinho. Formem grupos de até 3 jogadores!
 el_salvador: Professor, pode ser grupos de quatro pessoas?
 ...
-[wait time="1.0"]
 prof_sabio: Não! No máximo 3 pessoas!
 voce: Olá, tudo bem? Eu sou novo na turma, posso me juntar a vocês?
 el_salvador: Oi, tudo bem, e com você? Infelizmente nosso grupo está completo
@@ -40,7 +36,6 @@ Nossa que cheiro de comida...
 china: Estou comendo uma batata.
 voce: Batata Rústica?
 prof_sabio: Gostei do nome pessoal! Parabéns!
-[wait time="2.5" hide_text="false"]
 prof_sabio: É hora das ideias. Vocês foram contratados e precisam criar ideias para um jogo
 prof_sabio: Façam o Brainstorm
 [end_timeline]
