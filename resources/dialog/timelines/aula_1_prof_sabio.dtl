@@ -1,8 +1,10 @@
 join prof_sabio 1 [animation="Fade In Up" wait="true"]
 join voce (voce) 1 [animation="Fade In Up"]
 prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
-prof_sabio: Assim que terminar iriei inicar a aula.
-prof_sabio: <Empty Text Event>
+prof_sabio: Assim que terminar iriei inicar a aula, já arranje um lugar.
+prof_sabio: ...
+prof_sabio: ... ...
+prof_sabio: Pronto!
 join china 1 [animation="Fade In Up" wait="true"]
 join panama 1
 join islandia 1
@@ -13,11 +15,11 @@ join granada 1
 join el_salvador 1
 prof_sabio: Então pessoal, vamos começar a aula!
 prof_sabio: O objetivo dessa disciplina é desenvolver um jogo!
-prof_sabio: Aqui nós seguiremos as seguintes regras\:\
-- Entregar os jogos na data prevista!\
-- Outra regra essencial é que não pode ficar sozinho. Formem grupos de até 3 jogadores!
+prof_sabio: Aqui nós seguiremos a seguinte regra\:\
+- Primeira e única regra\: Entregar os jogos na data prevista!
+prof_sabio: Na verdade, outra regra essencial é\: Não ficar sozinho!. Formem grupos de até 3 jogadores!
 el_salvador: Professor, pode ser grupos de quatro pessoas?
-...
+prof_sabio (Default): ...
 prof_sabio: Não! No máximo 3 pessoas!
 voce: Olá, tudo bem? Eu sou novo na turma, posso me juntar a vocês?
 el_salvador: Oi, tudo bem, e com você? Infelizmente nosso grupo está completo
