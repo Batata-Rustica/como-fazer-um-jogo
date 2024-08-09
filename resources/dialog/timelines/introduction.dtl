@@ -1,0 +1,8 @@
+(Pressione barra de espaço no teclado ou X no controle para continuar)
+join prof_sabio 1 [animation="Bounce In" wait="true"]
+prof_sabio (Default): Bom dia! Me chamo Sábio e nesse semestre vou dar aula de Jogos Digitais, em que os alunos vão aprender a fazer um jogo, passando por todos os passos de produção.
+prof_sabio: Ah, você já está matriculado? Que bom! Então pode ir para o laboratório 153, é a porta aberta no final do corredor a direita.
+prof_sabio: Você pode se mover no teclado com as teclas WASD ou com as setinhas. No controle você pode utilizar os botões direcionais.
+prof_sabio: Para interagir com outros personagens você pode clicar neles com o botão direito ou com o botão equivalente ao triângulo no seu controle.
+prof_sabio: Agora vá para a sala de aula, ainda vou resolver algumas coisas antes do início da aula.
+leave --All-- [animation="Bounce Out" wait="true"]

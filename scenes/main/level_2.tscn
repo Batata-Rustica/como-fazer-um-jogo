@@ -1,0 +1,328 @@
+[gd_scene load_steps=22 format=3 uid="uid://wyrmas8nygxq"]
+
+[ext_resource type="PackedScene" uid="uid://68u2gnges7ur" path="res://scenes/levels/level_lab1.tscn" id="1_1r7yg"]
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_bmnl3"]
+[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_85jai"]
+[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_2x0th"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="3_fo54b"]
+[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_ki3dc"]
+[ext_resource type="PackedScene" uid="uid://c5xx8ddpm7rqp" path="res://scenes/main/npc.tscn" id="4_ydxov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4rb"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_nsluf"]
+resource_name = "DEFAULT"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_styles/panel:bg_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+
+[sub_resource type="Animation" id="Animation_qv6lb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:bg_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel:bg_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_styles/panel:bg_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykm15"]
+_data = {
+"DEFAULT": SubResource("Animation_nsluf"),
+"RESET": SubResource("Animation_qv6lb")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl0yq"]
+bg_color = Color(0, 0, 0, 0.8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1x3pt"]
+font = ExtResource("4_ki3dc")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57ra1"]
+radius = 2.0
+height = 11.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_03i3q"]
+radius = 2.0
+height = 11.6
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fy5ol"]
+radius = 2.0
+height = 11.6
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bl2pn"]
+radius = 2.2
+height = 11.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q77xm"]
+radius = 2.2
+height = 11.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q1adr"]
+radius = 2.0
+height = 11.6
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dts7a"]
+radius = 2.6
+height = 11.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxrct"]
+radius = 2.6
+height = 11.6
+
+[node name="level_2" type="Node2D"]
+script = ExtResource("1_bmnl3")
+
+[node name="level_terrain" parent="." instance=ExtResource("1_1r7yg")]
+position = Vector2(-681, 180)
+layer_2/tile_data = PackedInt32Array(393303, 65538, 8, 393304, 65538, 8, 393305, 65538, 8, 393306, 65538, 8, 393307, 65538, 8, 393308, 131074, 8, 393291, 65538, 3, 393292, 65538, 3, 393293, 65538, 3, 393294, 65538, 3, 393295, 65538, 3, 393296, 131074, 3, 458832, 131074, 4, 393284, 786434, 3, 458820, 786434, 4, 393279, 720898, 3, 458815, 720898, 4, 393280, 720898, 3, 458816, 720898, 4, 393281, 720898, 3, 458817, 720898, 4, 393282, 720898, 3, 458818, 720898, 4, 393283, 720898, 3, 458819, 720898, 4, 458827, 65538, 4, 458828, 65538, 4, 458829, 65538, 4, 458830, 65538, 4, 458831, 65538, 4, 196710, 655362, 41, 196711, 720898, 41, 196712, 655362, 41, 196713, 720898, 41, 196714, 655362, 41, 196715, 720898, 41, 131176, 655362, 40, 131177, 720898, 40, 131174, 655362, 40, 131175, 720898, 40, 131178, 655362, 40, 131179, 720898, 40, 262244, 458754, 38, 327780, 458754, 39, 262245, 524290, 38, 327781, 524290, 39, 262246, 589826, 38, 327782, 589826, 39, 393318, 458754, 38, 458854, 458754, 39, 393319, 524290, 38, 458855, 524290, 39, 393320, 589826, 38, 458856, 589826, 39, 393321, 458754, 38, 458857, 458754, 39, 393322, 524290, 38, 458858, 524290, 39, 393323, 589826, 38, 458859, 589826, 39, 262251, 458754, 38, 327787, 458754, 39, 262252, 524290, 38, 327788, 524290, 39, 262253, 589826, 38, 327789, 589826, 39, -262038, 851973, 10, -262037, 851973, 10, 393302, 2, 8, 393290, 2, 3, 393278, 655362, 3, 458814, 655362, 4, 458826, 2, 4, 458844, 131074, 9, 458843, 65538, 9, 458842, 65538, 9, 458841, 65538, 9, 458840, 65538, 9, 458839, 65538, 9, 458838, 2, 9)
+
+[node name="player" parent="." instance=ExtResource("2_85jai")]
+position = Vector2(1031, 152)
+
+[node name="transition_container" type="PanelContainer" parent="player/camera" index="0"]
+offset_left = -202.0
+offset_top = -120.0
+offset_right = 203.0
+offset_bottom = 122.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_md4rb")
+
+[node name="transition" type="AnimationPlayer" parent="player/camera/transition_container"]
+libraries = {
+"": SubResource("AnimationLibrary_ykm15")
+}
+
+[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="3"]
+z_index = 6
+offset_left = -199.0
+offset_top = -116.0
+offset_right = 200.0
+offset_bottom = 116.0
+script = ExtResource("3_2x0th")
+
+[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gl0yq")
+
+[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 89.0
+offset_right = 335.0
+offset_bottom = 135.0
+text = "interaja com o professor
+e com os outros alunos.
+Após isso, dirija-se
+ao PC livre"
+label_settings = SubResource("LabelSettings_1x3pt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_changer" parent="." instance=ExtResource("3_fo54b")]
+z_index = 4
+position = Vector2(363, 313)
+monitoring = false
+
+[node name="CollisionShape2D" parent="level_changer" index="0"]
+position = Vector2(4, -52)
+
+[node name="npc" parent="." instance=ExtResource("4_ydxov")]
+position = Vector2(1002, 256)
+
+[node name="team1" type="Node2D" parent="."]
+
+[node name="el_salvador" parent="team1" instance=ExtResource("4_ydxov")]
+position = Vector2(782, 251)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team1/el_salvador" index="0"]
+region_rect = Rect2(17, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team1/el_salvador/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_57ra1")
+
+[node name="islandia" parent="team1" instance=ExtResource("4_ydxov")]
+position = Vector2(750, 250)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team1/islandia" index="0"]
+region_rect = Rect2(33, 0, 14, 29)
+
+[node name="CollisionShape2D" parent="team1/islandia/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_03i3q")
+
+[node name="gana" parent="team1" instance=ExtResource("4_ydxov")]
+position = Vector2(718, 251)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team1/gana" index="0"]
+region_rect = Rect2(49, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team1/gana/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_fy5ol")
+
+[node name="team2" type="Node2D" parent="."]
+position = Vector2(-192, -1)
+
+[node name="granada" parent="team2" instance=ExtResource("4_ydxov")]
+position = Vector2(782, 252)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team2/granada" index="0"]
+region_rect = Rect2(65, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team2/granada/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_bl2pn")
+
+[node name="japao" parent="team2" instance=ExtResource("4_ydxov")]
+position = Vector2(750, 252)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team2/japao" index="0"]
+region_rect = Rect2(81, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team2/japao/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_q77xm")
+
+[node name="papua_nova_guine" parent="team2" instance=ExtResource("4_ydxov")]
+position = Vector2(718, 251)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team2/papua_nova_guine" index="0"]
+region_rect = Rect2(129, 0, 14, 29)
+
+[node name="CollisionShape2D" parent="team2/papua_nova_guine/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_q1adr")
+
+[node name="team3" type="Node2D" parent="."]
+position = Vector2(-384, 0)
+
+[node name="china" parent="team3" instance=ExtResource("4_ydxov")]
+position = Vector2(782, 251)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team3/china" index="0"]
+region_rect = Rect2(97, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team3/china/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_dts7a")
+
+[node name="panama" parent="team3" instance=ExtResource("4_ydxov")]
+position = Vector2(718, 251)
+npc_dialog = ""
+metadata/_edit_group_ = true
+
+[node name="sprite" parent="team3/panama" index="0"]
+region_rect = Rect2(113, 2, 14, 27)
+
+[node name="CollisionShape2D" parent="team3/panama/dialog_starter" index="0"]
+shape = SubResource("CapsuleShape2D_xxrct")
+
+[node name="after_dialog" type="Marker2D" parent="."]
+position = Vector2(368, 220)
+
+[editable path="player"]
+[editable path="level_changer"]
+[editable path="team1/el_salvador"]
+[editable path="team1/el_salvador/dialog_starter"]
+[editable path="team1/islandia"]
+[editable path="team1/islandia/dialog_starter"]
+[editable path="team1/gana"]
+[editable path="team1/gana/dialog_starter"]
+[editable path="team2/granada"]
+[editable path="team2/granada/dialog_starter"]
+[editable path="team2/japao"]
+[editable path="team2/japao/dialog_starter"]
+[editable path="team2/papua_nova_guine"]
+[editable path="team2/papua_nova_guine/dialog_starter"]
+[editable path="team3/china"]
+[editable path="team3/china/dialog_starter"]
+[editable path="team3/panama"]
+[editable path="team3/panama/dialog_starter"]

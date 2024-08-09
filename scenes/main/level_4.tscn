@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://cmoatu13yaa5y"]
+
+[ext_resource type="Script" path="res://scripts/level_4.gd" id="1_luull"]
+[ext_resource type="PackedScene" uid="uid://cm5w32p5li02j" path="res://scenes/levels/level_inf1.tscn" id="1_x7gjd"]
+[ext_resource type="PackedScene" uid="uid://seesw4dwuuod" path="res://scenes/main/player.tscn" id="2_f527o"]
+[ext_resource type="Script" path="res://scripts/level_name_screen.gd" id="3_s88gj"]
+[ext_resource type="FontFile" uid="uid://cb6eo3ivvbo2h" path="res://resources/fonts/VeniteAdoremusStraight-Yzo6v.ttf" id="4_uiv40"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="5_ihhcu"]
+[ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="5_r7d2n"]
+[ext_resource type="Texture2D" uid="uid://cb1d2g6qffcbx" path="res://resources/UI/emote__.png" id="7_rkbb1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr558"]
+bg_color = Color(0, 0, 0, 0.8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3kds"]
+font = ExtResource("4_uiv40")
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_6x61r"]
+font = ExtResource("5_r7d2n")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_0nmab"]
+font = ExtResource("5_r7d2n")
+font_color = Color(0, 0, 0, 1)
+
+[node name="level_4" type="Node2D"]
+script = ExtResource("1_luull")
+
+[node name="level_terrain" parent="." instance=ExtResource("1_x7gjd")]
+
+[node name="player" parent="." instance=ExtResource("2_f527o")]
+position = Vector2(96, -37)
+
+[node name="level_name_screen" type="PanelContainer" parent="player/camera" index="2"]
+z_index = 6
+offset_left = -199.0
+offset_top = -116.0
+offset_right = 200.0
+offset_bottom = 116.0
+script = ExtResource("3_s88gj")
+
+[node name="Panel" type="Panel" parent="player/camera/level_name_screen"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wr558")
+
+[node name="Label" type="Label" parent="player/camera/level_name_screen/Panel"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 328.0
+offset_bottom = 80.0
+text = "Semana 2"
+label_settings = SubResource("LabelSettings_g3kds")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="player/camera/level_name_screen/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 101.0
+offset_right = 397.0
+offset_bottom = 222.0
+text = "Após o brainstorm, você e seu time decidiram
+criar um jogo de plataforma. Inicialmente ele
+tem vários bugs que deverão ser consertados 
+com o passar das semanas"
+label_settings = SubResource("LabelSettings_6x61r")
+horizontal_alignment = 1
+
+[node name="thought" type="Sprite2D" parent="player"]
+visible = false
+position = Vector2(-23, -28)
+scale = Vector2(2.375, 1.875)
+texture = ExtResource("7_rkbb1")
+
+[node name="Label" type="Label" parent="player/thought"]
+offset_left = -5.47368
+offset_top = -9.6
+offset_right = 6.52632
+offset_bottom = 4.4
+text = "153"
+label_settings = SubResource("LabelSettings_0nmab")
+
+[node name="level_changer" parent="." instance=ExtResource("5_ihhcu")]
+z_index = 2
+position = Vector2(778, -376)
+
+[connection signal="tree_exited" from="player/camera/level_name_screen" to="." method="_on_level_name_screen_tree_exited"]
+
+[editable path="player"]

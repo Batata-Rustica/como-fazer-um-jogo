@@ -1,0 +1,44 @@
+join prof_sabio 1 [animation="Fade In Up" wait="true"]
+join voce (voce) 1 [animation="Fade In Up"]
+prof_sabio: Olá, estou um pouco ocupado agora, preciso instalar esse DataShow.
+prof_sabio: Assim que terminar iriei inicar a aula, já arranje um lugar.
+prof_sabio: ...
+prof_sabio: ... ...
+prof_sabio: Pronto!
+join china 1 [animation="Fade In Up" wait="true"]
+join panama 1
+join islandia 1
+join gana 1
+join japao 1
+join papua_nova_guine 1
+join granada 1
+join el_salvador 1
+prof_sabio: Então pessoal, vamos começar a aula!
+prof_sabio: O objetivo dessa disciplina é desenvolver um jogo!
+prof_sabio: Aqui nós seguiremos a seguinte regra\:\
+- Primeira e única regra\: Entregar os jogos na data prevista!
+prof_sabio: Na verdade, outra regra essencial é\: Não ficar sozinho!. Formem grupos de até 3 jogadores!
+el_salvador: Professor, pode ser grupos de quatro pessoas?
+prof_sabio (Default): ...
+prof_sabio: Não! No máximo 3 pessoas!
+voce: Olá, tudo bem? Eu sou novo na turma, posso me juntar a vocês?
+el_salvador: Oi, tudo bem, e com você? Infelizmente nosso grupo está completo
+islandia: Tente falar com os outros grupos
+china: Oi, tudo bem? Vi que você está sem grupo. Você pode fazer parte do nosso grupo, se quiser...\
+Estamos em 2 pessoas no momento
+voce: Eu aceito, sim! Obrigado pelo convite...
+china: Meu nome é Wu Xi e essa é a Paola.
+panama: Oi, tudo bem? Prazer! Bem-vindo ao nosso grupo ...
+prof_sabio: Agora que os grupos estão formados vocês devem decidir o nome do grupo e elegir um líder
+panama: Eu creio que a Wu XI é uma boa opção para ser a líder do nosso grupo, ela quem nos chamou para participar...
+voce: Concordo plenamente, já começou com ato de liderança
+voce: Eu tenho uma boa ideia para o nome do grupo, que tal algo engraçado de que todos nós gostamos?
+panama: Não gosto muito da ideia, pensei em algo mais normal, que retrata algo mais antigo, mais rústico ...\
+Nossa que cheiro de comida...
+china: Estou comendo uma batata.
+voce: Batata Rústica?
+prof_sabio: Gostei do nome pessoal! Parabéns!
+prof_sabio: É hora das ideias. Vocês foram contratados e precisam criar ideias para um jogo
+prof_sabio: Façam o Brainstorm
+[end_timeline]
+[signal arg="fim"]

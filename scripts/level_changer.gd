@@ -1,0 +1,15 @@
+extends Area2D
+
+const max_level = 7
+const BEGIN_FILE = "res://scenes/main/level_"
+
+func _on_body_entered(body):
+	if body.has_method("player"):
+		var current_level = get_tree().current_scene.scene_file_path
+		var current_level_number = current_level.to_int()
+		var next_level_number = current_level_number + 1
+		if next_level_number > max_level:
+			next_level_number = 3
+		var next_level = BEGIN_FILE + str(next_level_number) + ".tscn"
+		get_tree().change_scene_to_file(next_level)
+		

@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3 uid="uid://crgteqf04snpi"]
+
+[ext_resource type="PackedScene" uid="uid://c0nj2fyucb7f0" path="res://scenes/platform/platform_arena.tscn" id="1_7hn6r"]
+[ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="2_o7eix"]
+[ext_resource type="Texture2D" uid="uid://75opyfncecbs" path="res://resources/character/platform/enemy_platform.png" id="3_0etdp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5wy7"]
+font = ExtResource("2_o7eix")
+font_size = 141
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eltid"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtffw"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(0, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2od2"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(48, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vp7a"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(96, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2rfy"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(144, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jin6"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(192, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1le4k"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(240, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js67m"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(288, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv5nq"]
+atlas = ExtResource("3_0etdp")
+region = Rect2(336, 48, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lft2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eltid")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtffw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2od2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vp7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2rfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jin6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1le4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js67m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv5nq")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]
+
+[node name="level_6" type="Node2D"]
+
+[node name="platform_arena" parent="." instance=ExtResource("1_7hn6r")]
+
+[node name="Label" parent="platform_arena/game_over_screen" index="0"]
+offset_left = 25.8772
+offset_top = 390.0
+offset_right = 1937.88
+offset_bottom = 558.0
+scale = Vector2(0.094737, 1)
+text = "Pressione Ctrl+R para tentar novamente"
+label_settings = SubResource("LabelSettings_m5wy7")
+
+[node name="cogumelouco" type="AnimatedSprite2D" parent="platform_arena"]
+position = Vector2(175.5, 296.5)
+scale = Vector2(0.53125, 0.53125)
+sprite_frames = SubResource("SpriteFrames_lft2t")
+animation = &"walking"
+autoplay = "walking"
+frame_progress = 0.569706
+
+[connection signal="death" from="platform_arena/flying_enemy" to="platform_arena" method="_on_flying_enemy_death"]
+[connection signal="death" from="platform_arena/flying_enemy2" to="platform_arena" method="_on_flying_enemy_2_death"]
+[connection signal="death" from="platform_arena/flying_enemy3" to="platform_arena" method="_on_flying_enemy_3_death"]
+[connection signal="death" from="platform_arena/flying_enemy4" to="platform_arena" method="_on_flying_enemy_4_death"]
+[connection signal="death" from="platform_arena/flying_enemy5" to="platform_arena" method="_on_flying_enemy_5_death"]
+[connection signal="death" from="platform_arena/flying_enemy6" to="platform_arena" method="_on_flying_enemy_6_death"]
+[connection signal="death" from="platform_arena/flying_enemy7" to="platform_arena" method="_on_flying_enemy_7_death"]
+[connection signal="death" from="platform_arena/flying_enemy8" to="platform_arena" method="_on_flying_enemy_8_death"]
+[connection signal="death" from="platform_arena/flying_enemy9" to="platform_arena" method="_on_flying_enemy_9_death"]
+
+[editable path="platform_arena"]

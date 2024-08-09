@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://crgteqf04snpi"]
+
+[ext_resource type="PackedScene" uid="uid://c0ubu8qpmgabf" path="res://scenes/platform/platform_base.tscn" id="1_cdkml"]
+[ext_resource type="PackedScene" uid="uid://dgih8euvyro0a" path="res://scenes/main/level_changer.tscn" id="2_p53lo"]
+[ext_resource type="FontFile" uid="uid://bkov2m7guiwcr" path="res://resources/fonts/pansyhand.ttf" id="3_e3tnu"]
+[ext_resource type="Texture2D" uid="uid://e7ihvxlv5va0" path="res://resources/UI/mouse_right.png" id="4_rcr28"]
+[ext_resource type="Texture2D" uid="uid://bxswsrj3jwxq5" path="res://resources/UI/keyboard_arrows_horizontal.png" id="5_fq6f0"]
+[ext_resource type="Texture2D" uid="uid://c77120fydkex3" path="res://resources/UI/keyboard_arrow_right.png" id="6_2jk0m"]
+[ext_resource type="Texture2D" uid="uid://dti7u7c8njfw8" path="res://resources/UI/keyboard_arrow_left.png" id="7_4y6gh"]
+[ext_resource type="Texture2D" uid="uid://k7vt36m74gsu" path="res://resources/UI/keyboard_space_icon.png" id="8_7hbkm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbvfk"]
+font = ExtResource("3_e3tnu")
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jsjnr"]
+font = ExtResource("3_e3tnu")
+font_size = 48
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pvqjp"]
+font = ExtResource("3_e3tnu")
+font_size = 80
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="platform_base" instance=ExtResource("1_cdkml")]
+
+[node name="level_changer" parent="." index="5" instance=ExtResource("2_p53lo")]
+position = Vector2(489, 340)
+scale = Vector2(8.60239, -1.6131)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="6"]
+offset_left = 295.0
+offset_top = 56.0
+offset_right = 432.0
+offset_bottom = 157.0
+
+[node name="Label" type="Label" parent="VBoxContainer" index="0"]
+layout_mode = 2
+text = "Siga em frente -->
+Mas cuidado com os inimigos 😱"
+label_settings = SubResource("LabelSettings_wbvfk")
+
+[node name="attack" type="Sprite2D" parent="VBoxContainer" index="1"]
+position = Vector2(5, 43)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("4_rcr28")
+
+[node name="Label2" type="Label" parent="VBoxContainer/attack" index="0"]
+offset_left = 38.4
+offset_top = -25.6
+offset_right = 175.4
+offset_bottom = 15.4
+text = "Atacar"
+label_settings = SubResource("LabelSettings_jsjnr")
+
+[node name="move" type="Sprite2D" parent="VBoxContainer" index="2"]
+position = Vector2(5.25, 56.25)
+scale = Vector2(0.273437, 0.273437)
+texture = ExtResource("5_fq6f0")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/move" index="0"]
+position = Vector2(16.235, 8)
+scale = Vector2(0.316176, 0.316176)
+texture = ExtResource("6_2jk0m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="VBoxContainer/move" index="1"]
+position = Vector2(-16, 8)
+scale = Vector2(0.316176, 0.316176)
+texture = ExtResource("7_4y6gh")
+
+[node name="Label2" type="Label" parent="VBoxContainer/move" index="2"]
+offset_left = 32.0
+offset_top = -19.2
+offset_right = 169.0
+offset_bottom = 21.8
+text = "Andar"
+label_settings = SubResource("LabelSettings_jsjnr")
+
+[node name="jump" type="Sprite2D" parent="VBoxContainer" index="3"]
+position = Vector2(5.625, 70.625)
+scale = Vector2(0.167969, 0.167969)
+texture = ExtResource("8_7hbkm")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/jump" index="0"]
+offset_left = 49.8605
+offset_top = -39.4419
+offset_right = 139.861
+offset_bottom = 29.5581
+text = "Pular"
+label_settings = SubResource("LabelSettings_pvqjp")

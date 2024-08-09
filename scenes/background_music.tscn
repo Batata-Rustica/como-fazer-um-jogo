@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cspc7e78sqa33"]
+
+[ext_resource type="AudioStream" uid="uid://dycsupl4ux4a3" path="res://resources/sounds/music/music1.mp3" id="1_ywig8"]
+[ext_resource type="Script" path="res://scripts/background_music.gd" id="2_2fu4e"]
+
+[node name="background_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_ywig8")
+volume_db = -20.0
+script = ExtResource("2_2fu4e")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

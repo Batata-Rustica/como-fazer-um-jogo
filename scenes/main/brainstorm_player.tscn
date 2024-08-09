@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4kjyydmrqtcg"]
+
+[ext_resource type="Script" path="res://scripts/brainstorm_player.gd" id="1_8glva"]
+[ext_resource type="Texture2D" uid="uid://dfjc7b1bkmkic" path="res://resources/character/npcs_sprites.png" id="2_crjne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yllh"]
+size = Vector2(12.5, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hos1o"]
+size = Vector2(18, 7)
+
+[node name="brainstorm_player" type="CharacterBody2D"]
+script = ExtResource("1_8glva")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_crjne")
+hframes = 10
+vframes = 3
+frame = 9
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, -1)
+shape = SubResource("RectangleShape2D_8yllh")
+
+[node name="collecting_area" type="Area2D" parent="."]
+
+[node name="collecting_collision" type="CollisionShape2D" parent="collecting_area"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_hos1o")
+
+[connection signal="body_entered" from="collecting_area" to="." method="_on_collecting_area_body_entered"]

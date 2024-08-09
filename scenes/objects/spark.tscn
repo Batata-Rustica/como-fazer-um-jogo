@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx1bijfr500x1"]
+
+[ext_resource type="Script" path="res://scripts/objects/spark.gd" id="1_fj2qm"]
+[ext_resource type="Texture2D" uid="uid://bju8i3gnhwjqg" path="res://resources/objects/extras.png" id="2_poif4"]
+
+[node name="spark" type="RigidBody2D"]
+z_index = 3
+script = ExtResource("1_fj2qm")
+
+[node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_poif4")
+region_enabled = true
+region_rect = Rect2(36, 32, 26, 31)
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+scale = Vector2(5, 5)
+build_mode = 1
+polygon = PackedVector2Array(13, -15.2, 13, -13.4, 4.8, -5.4, 11, -5.4, 10.8, -3.6, -5, 12, -9.6, 15.2, -8, 10, -2.8, -0.4, -13, -0.6, -13, -4.4, -8.8, -15.6)
